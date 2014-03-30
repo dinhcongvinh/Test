@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="hay45ddf_EcommerceDC" Class="DataNMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=112.78.2.154;Initial Catalog=hay45ddf_EcommerceDC;User ID=hay45ddf_congvinh" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="EcommercerDCConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Category" Member="Categories">
+    <Type Name="Category">
+      <Column Name="IDCategory" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NamesCategory" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AliasCategory" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IDParentCategory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesBackgound" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DescriptionCategory" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsNew" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IDParentCategory1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Category_Product" Member="Products" ThisKey="IDCategory" OtherKey="IDCategory" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="hay45ddf_congvinh.Adventiser" Member="Adventisers">
+    <Type Name="Adventiser">
+      <Column Name="IDAdventiser" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NameAdventiser" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Images" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Imformation" Member="Imformations">
+    <Type Name="Imformation">
+      <Column Name="IDInformation" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NamesInformation" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AliasInformation" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DetailInformation" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Material" Member="Materials">
+    <Type Name="Material">
+      <Column Name="IDMaterial" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NamMaterial" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Orders" Member="Orders">
+    <Type Name="Order">
+      <Column Name="IDOrders" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NamePeopleBuy" Type="System.String" DbType="NVarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="PhonePeopleBuy" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="EmailPeopleBuy" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AdressPeopleBuy" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionPeopleBuy" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TotalMoney" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IsPayment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Order_OrdersDetail" Member="OrdersDetails" ThisKey="IDOrders" OtherKey="IDOrders" Type="OrdersDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrdersDetails" Member="OrdersDetails">
+    <Type Name="OrdersDetail">
+      <Column Name="IDOrdersDetails" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDOrders" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NameProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PriceNameProduct" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="NumberProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalMoney" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Images" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="Order_OrdersDetail" Member="Order" ThisKey="IDOrders" OtherKey="IDOrders" Type="Order" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Product_OrdersDetail" Member="Product" ThisKey="IDProduct" OtherKey="IDProduct" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDCategory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="InventoryProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsHit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DescriptionProduct" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SpecificationProduct" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ImagesDetailProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DetailProduct" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Keywords" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsBanChay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDMaterial" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Product_OrdersDetail" Member="OrdersDetails" ThisKey="IDProduct" OtherKey="IDProduct" Type="OrdersDetail" />
+      <Association Name="Category_Product" Member="Category" ThisKey="IDCategory" OtherKey="IDCategory" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SetingSystem" Member="SetingSystems">
+    <Type Name="SetingSystem">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PageSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Facebook" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Logo" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="USD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EUR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Add]" Member="Add" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AUD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ImagesDC" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserAdmin" Member="UserAdmins">
+    <Type Name="UserAdmin">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Passwork" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Yahoo" Member="Yahoos">
+    <Type Name="Yahoo">
+      <Column Name="IDYahoo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NickYahoo" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionYahoo" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.CreateTableBasic" Method="CreateTableBasic">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SelectProductXuatKhauIndex" Method="SelectProductXuatKhauIndex">
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SelectProductXuatKhauIndexResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AliasCategory" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PagingordersIndex" Method="PagingordersIndex">
+    <Parameter Name="Between" Parameter="between" Type="System.Int32" DbType="Int" />
+    <Parameter Name="End" Parameter="end" Type="System.Int32" DbType="Int" />
+    <ElementType Name="PagingordersIndexResult">
+      <Column Name="IDOrders" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NamePeopleBuy" Type="System.String" DbType="NVarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="PhonePeopleBuy" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="EmailPeopleBuy" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AdressPeopleBuy" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionPeopleBuy" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TotalMoney" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IsPayment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PagingProductAdminIndex" Method="PagingProductAdminIndex">
+    <Parameter Name="Between" Parameter="between" Type="System.Int32" DbType="Int" />
+    <Parameter Name="End" Parameter="end" Type="System.Int32" DbType="Int" />
+    <ElementType Name="PagingProductAdminIndexResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AliasCategory" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PagingProductHangHieuIndex" Method="PagingProductHangHieuIndex">
+    <Parameter Name="Between" Parameter="between" Type="System.Int32" DbType="Int" />
+    <Parameter Name="End" Parameter="end" Type="System.Int32" DbType="Int" />
+    <ElementType Name="PagingProductHangHieuIndexResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AliasCategory" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PagingProductIndex" Method="PagingProductIndex">
+    <Parameter Name="Between" Parameter="between" Type="System.Int32" DbType="Int" />
+    <Parameter Name="End" Parameter="end" Type="System.Int32" DbType="Int" />
+    <ElementType Name="PagingProductIndexResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AliasCategory" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PagingProductXuatKhauIndex" Method="PagingProductXuatKhauIndex">
+    <Parameter Name="Between" Parameter="between" Type="System.Int32" DbType="Int" />
+    <Parameter Name="End" Parameter="end" Type="System.Int32" DbType="Int" />
+    <ElementType Name="PagingProductXuatKhauIndexResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AliasCategory" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SeachProductAllCategory" Method="SeachProductAllCategory">
+    <Parameter Name="NamePart" Parameter="namePart" Type="System.String" DbType="VarChar(200)" />
+    <ElementType Name="SeachProductAllCategoryResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SeachProductOfCategory" Method="SeachProductOfCategory">
+    <Parameter Name="IDCategory" Parameter="iDCategory" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NamePart" Parameter="namePart" Type="System.String" DbType="VarChar(200)" />
+    <ElementType Name="SeachProductOfCategoryResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SelectDetailProduct" Method="SelectDetailProduct">
+    <Parameter Name="IDProduct" Parameter="iDProduct" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SelectDetailProductResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDCategory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="InventoryProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsHit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DescriptionProduct" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SpecificationProduct" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ImagesDetailProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DetailProduct" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Keywords" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsBanChay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDMaterial" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SelectordersIndex" Method="SelectordersIndex">
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SelectordersIndexResult">
+      <Column Name="IDOrders" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NamePeopleBuy" Type="System.String" DbType="NVarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="PhonePeopleBuy" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="EmailPeopleBuy" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AdressPeopleBuy" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionPeopleBuy" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TotalMoney" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IsPayment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SelectProductAdminIndex" Method="SelectProductAdminIndex">
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SelectProductAdminIndexResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AliasCategory" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SelectProductHangHieuIndex" Method="SelectProductHangHieuIndex">
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SelectProductHangHieuIndexResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AliasCategory" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SelectProductHit" Method="SelectProductHit">
+    <ElementType Name="SelectProductHitResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AliasCategory" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesDetailProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SelectProductIbanchayIndex" Method="SelectProductIbanchayIndex">
+    <ElementType Name="SelectProductIbanchayIndexResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AliasCategory" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SelectProductInCategory" Method="SelectProductInCategory">
+    <Parameter Name="idSanPham" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SelectProductInCategoryResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AliasCategory" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SelectProductIndex" Method="SelectProductIndex">
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SelectProductIndexResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AliasCategory" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SelectProductOfCategory" Method="SelectProductOfCategory">
+    <Parameter Name="IDCategory" Parameter="iDCategory" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SelectProductOfCategoryResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SelectProductOfCategoryParent" Method="SelectProductOfCategoryParent">
+    <Parameter Name="IDCategory" Parameter="iDCategory" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SelectProductOfCategoryParentResult">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AliasProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NamesProduct" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CostProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CountViewProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBuyProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImagesLogoProduct" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

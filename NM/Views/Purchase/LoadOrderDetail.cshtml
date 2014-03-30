@@ -1,0 +1,56 @@
+﻿@model IEnumerable<NM.OrdersDetail>
+@{
+    Layout = null;
+}
+
+        
+         <div id="divthemloaihang" class="panel-wrapper" style="margin-top:25px;"> 
+        
+		</div>
+        	<div class="shadow"></div> 
+        
+        <div  class="panel-wrapper" style="margin-top:25px;"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>Danh sách sản phẩm</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<table id="sample-table-sortable" class="sortable resizable">
+                	<thead><tr>
+                    	<th>STT</th>
+                        <th>Tên sản phẩm</th>
+                        <th> Hình ảnh</th>
+                        <th> số lượng</th>
+                        <th> Giá</th>
+                         <th> Thành tiền</th>
+                        </tr></thead> 
+                    <tbody>
+                    @{
+                        int i = 1;
+                        foreach (var item in Model)
+                        {
+                             <tr id="@item.IDOrders">
+                    	    <td>@(i++)</td>
+                            <td>@item.NameProduct</td>
+                            <td><img src="../../@item.Images" style="height:60px; width:60px" /></td>
+                             <td>@item.NumberProduct</td>
+                               <td>@int.Parse(item.PriceNameProduct.ToString()).ToString("0,0 VND")</td>
+                            <td>@int.Parse(item.TotalMoney.ToString()).ToString("0,0 VND")</td>
+                            
+                            </tr>                        
+                        }
+                    }
+                   
+                  </tbody>
+				</table>  
+			<!-- ## / Panel Content  --> </div> 
+		</div>
+            </div>
+
+ <div class="notice warning" style="margin-top:25px;"><span><strong> Họ tên Khách hàng:</strong> @ViewBag.Khachhang</span> </div>
+ <div class="notice warning" style="margin-top:25px;"><span><strong> Email Khách hàng:</strong> @ViewBag.Email</span> </div>
+ <div class="notice warning" style="margin-top:25px;"><span><strong> Điện thoại liên hệ:</strong> @ViewBag.Phone</span> </div>
+ <div class="notice warning" style="margin-top:25px;"><span><strong> Giá trị đơn hàng:</strong> @ViewBag.Tongtien VND</span> </div>
+ <div class="notice warning" style="margin-top:25px;"><span><strong> Ngày giao hàng yêu cầu:</strong> @ViewBag.NgayGiao</span> </div>
+ <div class="notice warning" style="margin-top:25px;"><span><strong> Thông tin ghi chú:</strong> @ViewBag.GhiChu</span> </div>

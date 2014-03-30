@@ -1,0 +1,37 @@
+﻿@model NM.Adventiser
+@{
+    ViewBag.Title = "Edit Adventiser";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+
+ <div id="divthemloaihang" class="panel-wrapper" style="margin-top:25px;">         
+		</div>
+        	<div class="shadow"></div> 
+        
+ <div  class="panel-wrapper" style="margin-top:25px;">
+<div class="panel">
+            <div class="title"> 
+                <h4><strong>Chỉnh sửa CT khuyến mãi</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form method="post" action="/Adventiser/EditAdventiserHandler" enctype="multipart/form-data"> 
+                    <input type="hidden" name="id" value="@Model.IDAdventiser" />
+                    <div class="group fixed"> <label>Tên danh mục</label> <input type="text" value="@Model.NameAdventiser" name="nameCategory" /></div>
+                   
+                    <div class="group fixed"><label>Hình ảnh</label>  <input type="file" name="imageAdventiser" value="../../@Model.Images" /> <img width="20" height="20" src="../../@Model.Images" /> </div>
+                    
+                                          
+                    <br />
+                    <center><input type="submit" class="button-blue" value="Hoàn tất" /></center>
+				</form>
+			<!-- ## / Panel Content  --> </div> 
+		</div>
+        	<div class="shadow"></div> 
+
+        </div>
+		
+        <div class="notice warning" style="margin-top:25px;"><span><strong>Lưu ý:</strong> Khi bạn xóa danh mục bên ngoài trang chủ sẽ không hiện danh mục đó. Bạn có thể phục hồi sau khi xóa!</span> </div>
+                
+    

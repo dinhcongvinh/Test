@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "PagingOrder";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<div id="textload" style="display:none" >vinh</div>
+
+        
+         <div id="divthemloaihang" class="panel-wrapper" style="margin-top:25px;"> 
+        
+		</div>
+        	<div class="shadow"></div> 
+        
+        <div  class="panel-wrapper" style="margin-top:25px;"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>Danh sách sản phẩm</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<table id="sample-table-sortable" class="sortable resizable">
+                	<thead><tr>
+                    	<th>STT</th>
+                        <th>Khách hàng </th>
+                        <th> Số điện hoại</th>
+                        <th> Tổng tiền</th>
+                        <th> Chi tiết đơn hàng</th>
+                        <th>Xóa</th>
+					</tr></thead> 
+                    <tbody>
+                    @{
+                        int i = 1;
+                        foreach (var item in Model)
+                        {
+                             <tr id="@item.IDOrders">
+                    	    <td>@(i++)</td>
+                            <td>@item.NamePeopleBuy</td>
+                            <td>@item.PhonePeopleBuy</td>
+                            <td>@int.Parse(item.TotalMoney.ToString()).ToString("0,0 VND")</td>
+                            <td> <a href="#" onclick="LoadOrderDetail(@item.IDOrders)">Xem chi tiết</a>
+                            <td> <a href="/Purchase/DeleteOrder?idOrders=@item.IDOrders">Xóa</a>
+                                
+                            </td>
+                            </tr>                        
+                        }
+                    }
+                   
+                  </tbody>
+				</table>  
+			<!-- ## / Panel Content  --> </div> 
+		</div>
+        	<div class="shadow"></div> 
+        </div>
+
+                <div style="clear:both"></div>
+
+                <div id="Collectionpage" >  
+                    <div id="pagesrcoll">
+                        @for (int number = 1; number <= (int)ViewBag.pagenumber; number++)
+                        {
+                            if (number == int.Parse(Session["pagenumber"].ToString()))
+                            {
+                                <a href="/Purchase/PagingOrder?idPage=@number"><div class="item_colections">@number</div> </a>
+                            }
+                            else 
+                            {
+                                <a href="/Purchase/PagingOrder?idPage=@number"><div class="item_colection">@number</div> </a>
+                            }
+                        }
+           
+                     </div>
+                </div>
+
+                <br /><br />
+		
+        <div class="notice warning" style="margin-top:25px;"><span><strong>Lưu ý:</strong> Khi bạn xóa sản phẩm bên ngoài trang chủ sẽ không hiện sản phẩm đó. Bạn có thể phục hồi sau khi xóa!</span> </div>
+                
+    

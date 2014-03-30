@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<script>
+    function InsertImages()
+    {
+        var imageName = $('#imagessleted').val();
+        $('#imagesSelectedtext').val('/Images/' + imageName);
+        $('#imagesselcob').html('<img src="' + '/Images/' + imageName + '" width="90" height="90" >');
+    }
+
+</script>
+
+ <div class="panel-wrapper"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>THÊM SẢN PHẨM</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form id="formthemsanpham" method="post" action="/Product/AddProductHandle" enctype="multipart/form-data" > 
+                	    	<div class="group fixed"> <label>Tên Sản Phẩm</label> <input type="text" name="namesProduct"  maxlength="50" required /> </div>
+                    <div class="group fixed"> <label>Alias Sản Phẩm</label> <input type="text" name="aliasProduct"  maxlength="50" required /> </div>
+                    <div class="group fixed"> <label>Danh mục</label> @Html.DropDownList("Category", (SelectList)ViewData["Category"])</div>                    
+                    <div class="group fixed"> <label>Giá gốc</label> <input type="number" name="giagoc" class="required number" required /> </div>
+                    <div class="group fixed"> <label>Giá bán</label> <input type="number" name="giaban" class="required number" required /> </div>
+                     <div class="group fixed"> <label>Giới tính</label> 
+                            <select name="sex">
+                                <option value="1"> Nữ </option>
+                                <option value="2"> Nam </option>
+
+                            </select>
+                     </div>
+
+                    <div class="group fixed"> <label>Loại sản phẩm</label> 
+                            <select name="typeProduct">
+                                <option value="1"> Hàng nhập khẩu từ Mỹ </option>
+                                <option value="2"> Hàng xuất khẩu </option>
+
+                            </select>
+                     </div>
+
+                    <div class="group fixed"> <label>Chất liệu</label>   @Html.DropDownList("material", (SelectList)ViewData["Material"]) </div>
+
+                    <div class="group fixed"> <label>Số người đã mua</label> <input type="number" name="countBuyProduct" id="binh" value="123" required /> </div>
+                    <div class="group fixed"><label>Ảnh sản phẩm</label>  <input type="file" name="imagesProduct"  required/> (235 x 235)</div>
+                    <div class="group fixed"><label>Ảnh Banner sản phẩm</label>  <input type="file" name="imagesProductBanner" /> (750 x 460)</div>
+                             
+                    <div class="group fixed"> <label>Chi tiết sản phẩm</label> 
+                       
+                        <select id="imagessleted"  onchange="InsertImages()">
+                        @foreach (var item in (List<string>)ViewData["listImages"])
+                        {
+                            <option value="@item">@item</option>
+                        }
+                    </select>
+                        <br />
+                        
+                    <input type="text"  name="countB" value="" style="width:300px; " id="imagesSelectedtext" />
+                    <div style="float:left; margin-top:-40px" id="imagesselcob"></div>
+                        <br /><br /><br />
+                    <textarea class="ckeditor required" id="editor1" rows="10" cols="5" name="detailProduct"></textarea> </div>
+                    
+                    
+                    <div class="group fixed"> <label>Làm sản phẩm bán chạy</label> <input type="checkbox" name="isBanChay" /> </div>
+                    <div class="group fixed"> <label>Làm sản phẩm hit</label> <input type="checkbox" name="isHit" /> </div>
+                    
+                    <div class="group fixed"> <label>Từ khóa Google</label><input type="text" name="Keywords"  /> </div>
+                    <center> <input type="submit" class="button-blue" value="Thêm Sản Phẩm"></center>
+                    
+				</form>
+			<!-- ## / Panel Content  --> </div> 
+		</div>
+        	<div class="shadow"></div> 
+        </div>
+        
+

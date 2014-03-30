@@ -1,0 +1,36 @@
+﻿@model NM.Category
+@{
+    ViewBag.Title = "EditCategoryParentView";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+   <div id="divthemloaihang" class="panel-wrapper" style="margin-top:25px;">         
+		</div>
+        	<div class="shadow"></div> 
+        
+ <div  class="panel-wrapper" style="margin-top:25px;">
+<div class="panel">
+            <div class="title"> 
+                <h4><strong>Chỉnh sửa danh mục</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form method="post" action="/Admin/EditCategoryParent" enctype="multipart/form-data"> 
+                    <input type="hidden" name="iddm" value="@Model.IDCategory" />
+                    <div class="group fixed"> <label>Tên danh mục</label> <input type="text" value="@Model.NamesCategory" name="nameCategory" /> <input type="hidden" value="@Model.IDCategory" name="idCategory" /></div>
+                    <div class="group fixed"> <label>Alias danh mục</label> <input type="text" value="@Model.AliasCategory" name="aliasCategory" /> </div>
+                    <div class="group fixed"><label>Icon danh mục</label>  <input type="file" name="iconCategory" value="../../@Model.ImagesBackgound" /> <img width="20" height="20" src="../../@Model.ImagesBackgound" /> </div>
+                    <div class="group fixed"> <label>Là danh mục mới </label> @if(@Model.IsNew==false){<input type="checkbox" name="isNew"  /> } else { <input type="checkbox" name="isNew" checked="checked" />}</div>
+                     
+                     
+                    <br />
+                    <center><input type="submit" class="button-blue" value="Hoàn tất" /></center>
+				</form>
+			<!-- ## / Panel Content  --> </div> 
+		</div>
+        	<div class="shadow"></div> 
+
+        </div>
+		
+        <div class="notice warning" style="margin-top:25px;"><span><strong>Lưu ý:</strong> Khi bạn xóa danh mục bên ngoài trang chủ sẽ không hiện danh mục đó. Bạn có thể phục hồi sau khi xóa!</span> </div>
+                
+    

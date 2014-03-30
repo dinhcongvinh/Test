@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'NhomMuaBold';
+    src: url('http://www.nhommuahotdeals.net/font/nhom_mua-bold-webfont.eot');
+    src: url('http://www.nhommuahotdeals.net/font/nhom_mua-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://beta.nhommua.com/font/nhom_mua-bold-webfont.woff') format('woff'),
+         url('http://www.nhommuahotdeals.net/font/nhom_mua-bold-webfont.ttf') format('truetype'),
+         url('http://www.nhommuahotdeals.net/font/nhom_mua-bold-webfont.svg#NhomMuaBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'NhomMuaMedium';
+    src: url('http://www.nhommuahotdeals.net/font/nhom_mua-md-webfont.eot');
+    src: url('http://www.nhommuahotdeals.net/font/nhom_mua-md-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://beta.nhommua.com/font/nhom_mua-md-webfont.woff') format('woff'),
+         url('http://www.nhommuahotdeals.net/font/nhom_mua-md-webfont.ttf') format('truetype'),
+         url('http://www.nhommuahotdeals.net/font/nhom_mua-md-webfont.svg#NhomMuaMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'NhomMuaSmBd';
+    src: url('http://www.nhommuahotdeals.net/font/nhom_mua-sb-webfont.eot');
+    src: url('http://www.nhommuahotdeals.net/font/nhom_mua-sb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://beta.nhommua.com/font/nhom_mua-sb-webfont.woff') format('woff'),
+         url('http://www.nhommuahotdeals.net/font/nhom_mua-sb-webfont.ttf') format('truetype'),
+         url('http://www.nhommuahotdeals.net/font/nhom_mua-sb-webfont.svg#NhomMuaSmBd') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'NhomMuaRegular';
+    src: url('http://www.nhommuahotdeals.net/font/nhom_mua-rg-webfont.eot');
+    src: url('http://www.nhommuahotdeals.net/font/nhom_mua-rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://beta.nhommua.com/font/nhom_mua-rg-webfont.woff') format('woff'),
+         url('http://www.nhommuahotdeals.net/font/nhom_mua-rg-webfont.ttf') format('truetype'),
+         url('http://www.nhommuahotdeals.net/font/nhom_mua-rg-webfont.svg#NhomMuaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'VeticaBlack';
+    src: url('http://www.nhommuahotdeals.net/font/sfuhelveticablack.eot');
+    src: url('http://www.nhommuahotdeals.net/font/sfuhelveticablack.eot?#iefix') format('embedded-opentype'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticablack.woff') format('woff'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticablack.ttf') format('truetype'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticablack.svg#NhomMuaBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'VeticaLight';
+    src: url('http://www.nhommuahotdeals.net/font/sfuhelveticalight.eot');
+    src: url('http://www.nhommuahotdeals.net/font/sfuhelveticalight.eot?#iefix') format('embedded-opentype'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticalight.woff') format('woff'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticalight.ttf') format('truetype'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticalight.svg#NhomMuaMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'VeticaBold';
+    src: url('http://www.nhommuahotdeals.net/font/sfuhelveticabold.eot');
+    src: url('http://www.nhommuahotdeals.net/font/sfuhelveticabold.eot?#iefix') format('embedded-opentype'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticabold.woff') format('woff'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticabold.ttf') format('truetype'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticabold.svg#NhomMuaBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'VeticaConpress';
+    src: url('http://www.nhommuahotdeals.net/font/sfuhelveticacompressed.eot');
+    src: url('http://www.nhommuahotdeals.net/font/sfuhelveticacompressed.eot?#iefix') format('embedded-opentype'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticacompressed.woff') format('woff'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticacompressed.ttf') format('truetype'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticacompressed.svg#NhomMuaMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'VeticaOblique';
+    src: url('http://www.nhommuahotdeals.net/font/sfuhelveticaoblique.eot');
+    src: url('http://www.nhommuahotdeals.net/font/sfuhelveticaoblique.eot?#iefix') format('embedded-opentype'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticaoblique.woff') format('woff'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticaoblique.ttf') format('truetype'),
+         url('http://www.nhommuahotdeals.net/font/sfuhelveticaoblique.svg#NhomMuaBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}

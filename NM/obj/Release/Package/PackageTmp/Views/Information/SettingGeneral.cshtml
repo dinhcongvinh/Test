@@ -1,0 +1,122 @@
+﻿@model NM.SetingSystem
+@{
+    ViewBag.Title = "SettingGeneral";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+ <div class="panel-wrapper"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>Hiển thị sản phẩm</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form id="formthemsanpham" method="post" action="/Information/UpdatePageSize" enctype="multipart/form-data" > 
+                	  
+                    <div class="group fixed"> <label>Nội dung thông tin</label> <input type="number" name="pageSize" value ="@Model.PageSize" required /> </div>
+                                 
+                    <center> <input type="submit" class="button-blue" value="Cập nhật"></center>
+                    
+				</form>
+			<!-- ## / Panel Content  --> </div> 
+
+        	</div>
+        	<div class="shadow"></div> 
+        </div>
+
+ <div class="panel-wrapper"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>Logo hiển thị</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form id="formcapnhatlogo" method="post" action="/Information/UpdateLogo" enctype="multipart/form-data" > 
+                	  
+                    <div class="group fixed"> <label>Nội dung thông tin</label> <input type="file" name="file" /> </div>
+                                 <img src="../../@Model.Logo" width="60" />
+                    <center> <input type="submit" class="button-blue" value="Cập nhật"></center>
+                    
+				</form>
+			<!-- ## / Panel Content  --> </div> 
+
+        	</div>
+        	<div class="shadow"></div> 
+        </div>
+
+<div class="panel-wrapper"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>Hình ảnh quảng cáo</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form id="formcapnhatquangcao" method="post" action="/Information/UpdateImages" enctype="multipart/form-data" > 
+                	  
+                    <div class="group fixed"> <label>Nội dung thông tin</label> <input type="file" name="fileImages" /> </div>
+                                 <img src="../../@Model.ImagesDC" width="60" />
+                    <center> <input type="submit" class="button-blue" value="Cập nhật"></center>
+                    
+				</form>
+			<!-- ## / Panel Content  --> </div> 
+
+        	</div>
+        	<div class="shadow"></div> 
+        </div>
+
+ <div class="panel-wrapper"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>Tỷ giá</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form id="formcapnhatlogo" method="post" action="/Information/UpdateRate" enctype="multipart/form-data" > 
+                	  
+                   
+                    <center> <input type="submit" class="button-blue" value="Cập nhật tỷ giá tự động"></center>
+                    
+				</form>
+			<!-- ## / Panel Content  --> </div> 
+
+        	</div>
+        	<div class="shadow"></div> 
+        </div>
+        
+ <div class="panel-wrapper"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>Fanpage Facebook</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form id="formcapnhatfacebook" method="post" action="/Information/UpdateFacebook" enctype="multipart/form-data" > 
+                	  
+                   <div class="group fixed"> <label>Địa chỉ Fanpage Facebook</label> <input type="text" name="facebook" value ="@Model.Facebook" required /> </div>
+                    <center> <input type="submit" class="button-blue" value="Cập nhật"></center>
+                    
+				</form>
+			<!-- ## / Panel Content  --> </div> 
+
+        	</div>
+        	<div class="shadow"></div> 
+        </div>
+
+ <div class="panel-wrapper"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>Địa chỉ giao dịch</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form id="formcapnhatfacebook" method="post" action="/Information/UpdateAdd" enctype="multipart/form-data" > 
+                	  
+                   <div class="group fixed"> <label>Địa chỉ</label> <input type="text" name="add" value ="@Model.Add" required /> </div>
+                    <center> <input type="submit" class="button-blue" value="Cập nhật"></center>
+                    
+				</form>
+			<!-- ## / Panel Content  --> </div> 
+
+        	</div>
+        	<div class="shadow"></div> 
+        </div>

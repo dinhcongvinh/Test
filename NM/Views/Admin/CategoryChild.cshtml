@@ -1,0 +1,60 @@
+﻿@model IEnumerable<NM.Category>
+@{
+    ViewBag.Title = "CategoryChild";
+    Layout = "~/Views/Shared/_Admin.cshtml";    
+   
+}
+
+
+<div id="textload" style="display:none" >vinh</div>
+<div class="content spacing"><a href="/Admin/AddCategoryChildView"  class="button-blue">Thêm mới danh mục cấp 02</a></div>
+        
+         <div id="divthemloaihang" class="panel-wrapper" style="margin-top:25px;"> 
+        
+		</div>
+        	<div class="shadow"></div> 
+        
+        <div  class="panel-wrapper" style="margin-top:25px;"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>Danh sách danh mục cấp 02</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<table id="sample-table-sortable" class="sortable resizable">
+                	<thead><tr>
+                    	<th>STT</th>
+                        <th>Tên danh mục</th>
+                         <th>Mô tả</th>
+                        <th>Chỉnh sửa</th>
+                        <th>Xóa</th>
+					</tr></thead> 
+                    <tbody>
+                    @{
+                        int i = 1;
+                        foreach (var item in Model)
+                        {
+                             <tr id="@item.IDCategory">
+                    	    <td>@(i++)</td>
+                            <td>@item.NamesCategory</td>
+                            <td>@item.DescriptionCategory</td>
+                            <td><a href="/Admin/EditCategoryChildView?idCategory=@item.IDCategory" >Chỉnh sửa</a></td>
+                            <td> @if(@item.IsDelete==false){<a href="/Admin/DeleteCategoryChild?idCategory=@item.IDCategory">Xóa</a>}
+                                else {
+                                 <a href="/Admin/RestoreCategoryChild?idCategory=@item.IDCategory">Phục hồi </a>
+                                 }
+                            </td>
+                            </tr>                        
+                        }
+                    }
+                   
+                  </tbody>
+				</table>  
+			<!-- ## / Panel Content  --> </div> 
+		</div>
+        	<div class="shadow"></div> 
+        </div>
+		
+        <div class="notice warning" style="margin-top:25px;"><span><strong>Lưu ý:</strong> Khi bạn xóa danh mục bên ngoài trang chủ sẽ không hiện danh mục đó. Bạn có thể phục hồi sau khi xóa!</span> </div>
+                
+    

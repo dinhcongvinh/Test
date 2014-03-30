@@ -1,0 +1,7 @@
+﻿@model NM.Imformation
+@{
+    ViewBag.Title = "Điều lệ mua hàng";
+    Layout = "~/Views/Shared/_LayoutDetail.cshtml";
+}
+
+@Html.Raw(Server.HtmlDecode(Model.DetailInformation))

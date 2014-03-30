@@ -1,0 +1,56 @@
+﻿@model NM.Category
+@{
+    ViewBag.Title = "EditCategoryChildChildView";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+ <div id="divthemloaihang" class="panel-wrapper" style="margin-top:25px;">         
+		</div>
+        	<div class="shadow"></div> 
+        
+ <div  class="panel-wrapper" style="margin-top:25px;">
+<div class="panel">
+            <div class="title"> 
+                <h4><strong>Chỉnh sửa danh mục cấp 3</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form method="post" action="/Admin/EditCategoryChildChild" enctype="multipart/form-data"> 
+                    <input type="hidden" name="iddm" value="@Model.IDCategory" />
+                    <div class="group fixed"> <label>Tên danh mục</label> <input type="text" value="@Model.NamesCategory" name="nameCategory" /> <input type="hidden" value="@Model.IDCategory" name="idCategory" /></div>
+
+                     <div class="group fixed"> <label>Alias danh mục</label> <input type="text" value="@Model.AliasCategory" name="aliasCategory" /> </div>
+                    <div class="group fixed">
+                          <label>Mô tả danh mục</label>
+                          <input type="text" value="@Model.DescriptionCategory" name="descriptionCategory" />
+
+                     </div>
+                   
+                    <div class="group fixed"> <label>Danh mục cha</label>
+                         <select name="idCategoryParent" >
+                             @foreach (var item in (IEnumerable<NM.Category>)ViewData["categoryParent"])
+                             {
+                                 if (item.IDCategory == Model.IDParentCategory1)
+                                 {
+                                     <option selected="selected" value="@item.IDCategory"> @item.NamesCategory</option>
+                                 }
+                                 else 
+                                 {
+                                      <option value="@item.IDCategory"> @item.NamesCategory</option>
+                                 }
+                             }
+                            
+                          </select>
+                    </div>  
+                    <br />
+                    <center><input type="submit" class="button-blue" value="Hoàn tất" /></center>
+				</form>
+			<!-- ## / Panel Content  --> </div> 
+		</div>
+        	<div class="shadow"></div> 
+
+        </div>
+		
+        <div class="notice warning" style="margin-top:25px;"><span><strong>Lưu ý:</strong>Khi bạn xóa danh mục bên ngoài trang chủ sẽ không hiện danh mục đó. Bạn có thể phục hồi sau khi xóa!</span> </div>
+                
+    

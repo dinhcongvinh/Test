@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="ctl00_headerTag">
+
+    @{
+        if (IsSectionDefined("meta"))
+        {
+                @RenderSection("meta", false);
+        }
+        else
+        {
+                <title>--- HayFashion.vn --- </title>
+                <meta name="robots" content="NOODP,index,follow"  />
+                <meta name="copyright" content="VINHDC" />
+                <meta name="author" content="VINHDC" />
+                   <meta id="ctl00_Head_Content_headDesc" name="description" content=" giành cho doanh nghiệp nhỏ và cá nhân với chất lượng không thể tốt hơn,"/>
+                <meta id="ctl00_Head_Content_headKw" name="keywords" content=", website, ban hang, bán hàngbsite"/>       }
+    }
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+	<style type="text/css">
+     .mainMenu:hover .contentMenu{display:none !important;}
+     .mainMenu:hover .contentMenu.focusIndex{display:block !important}
+    </style>
+
+<link type="text/css" rel="stylesheet" href="~/Frondend_files/reset.css"/>
+<link type="text/css" rel="stylesheet" href="~/Frondend_files/style.css"/>
+<link type="text/css" rel="stylesheet" href="~/Frondend_files/customScrollbar.css"/>
+<link type="text/css" rel="stylesheet" href="~/Frondend_files/main.css"/>        
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46213494-1', 'hayfashion.vn');
+        ga('send', 'pageview');
+
+</script>
+
+
+    <script type="text/javascript" src="~/Frondend_files/FixIE.js"></script>   
+    
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</head>
+<body id="ctl00_dBody" style="zoom: 1;">
+
+   
+
+    <div style="display:block" class="wrapper">
+         <div style="position:absolute; margin-left:2%; float:right; margin-top:15%;">
+       
+                       @Html.Action("ShowFacebook","Home")
+         </div>
+			
+       
+            <section class="tabs-header" id="tabs-headerDC">
+                <div class="mod-innerHeader">
+                    <div class="gr-tabs">
+                        <p>
+                            <a href="/Home/Index">Trang chủ</a>
+                            <span>|</span>
+							<a href="/Home/Qui_trinh_mua_hang">Qui trình mua hàng</a>    
+                            <span>|</span>
+                            <a href="/Home/Dieu_le_mua_hang">Điều lệ mua hàng</a>  
+                            <span>|</span>                              
+                            <a href="/Home/Lien_he_voi_chung_toi">Liên hệ</a>                      
+                        </p>
+                    </div>
+                   
+                 @Html.Action("ShowLogoYahooOnline", "Home")
+                   
+                </div>
+            </section>
+            <section class="sectionBody">
+                
+                @Html.Action("ShowSeachCart", "Home");
+               <br /> <br /> 
+	            <div style=" clear:both;"></div> <br />
+
+	
+   
+    <section class="sectionListDeal">
+        <div class="mod-inner-list">
+            <div class="dListDeal">                
+          @RenderBody()
+            </div>
+        </div>
+    </section>
+    
+                </section>
+      </div>
+    
+ <div id="footer">
+            <div id="footerItem1">
+                          
+                <div id="footerDC">
+                    <h4 style="color:white; font-weight:bold; border-bottom:1px solid white; font-family:Tahoma; line-height:30px; text-align:left">THÔNG TIN WEBSITE</h4>
+                    <br />
+                    <a href="/Home/Index"><h4 style="color:orange; font-weight:bold; text-align:left; height:25px">Trang chủ</h4></a>                    
+                    <a href="/Home/Qui_trinh_mua_hang"><h4 style="color:orange; font-weight:bold; text-align:left;height:25px">Qui trình mua hàng</h4></a>  
+                    <a href="/Home/Dieu_le_mua_hang"><h4 style="color:orange; font-weight:bold; text-align:left;height:25px">Điều lệ mua hàng</h4></a>                   
+                    <a href="/Home/Lien_he_voi_chung_toi"><h4 style="color:orange; font-weight:bold; text-align:left;height:25px">Liên hệ</h4></a>
+
+                     <h4 style="color:white; font-weight:bold; border-bottom:1px solid white; font-family:Tahoma; line-height:30px; text-align:left">THÔNG TIN LIÊN HỆ</h4>
+                    <br />
+                    <span style="color:white">
+                    @Html.Action("ShowAddress","Home")  
+                    </span>
+                </div>
+                
+                
+            </div>
+
+             <div id="footerItem2">  
+                  <div style="color:white;font-size:17px; font-weight:bold; font-family:Tahoma; width:100%; margin-top:10px; text-align:center">
+                     MẠNG MUA SẮM HAYFASHION.VN <br /> 
+                    <i style="font-size:12px;">( Chất lượng trên từng sản phẩm! )</i>
+                    <br />
+                    <img style="float:right; margin-right:120px; margin-top:10px;z-index:999;" src="~/Frondend_files/images/icon_mobile.png" />
+                    <br />
+                     <img style="float:right; margin-right:50px;z-index:999;margin-top:25px" src="~/Frondend_files/images/browsers.png" />
+                </div>
+            </div>    
+ </div>
+
+
+
+    <script type="text/javascript" src="~/Frondend_files/all_common.js"></script>
+	<script type="text/javascript" src="~/Frondend_files/jquery.ui.js"></script>
+	<script type="text/javascript" src="~/Frondend_files/all_index.js"></script>
+
+</body> 
+   
+<script type="text/javascript"> 
+<!--//--><![CDATA[//><!-- 
+    jQuery.extend(Drupal.settings, { "basePath": "/", "boost": { "nid": "23", "q": "NULL", "title": "NULL" } });
+    //--><!]]> 
+</script>
+</html>

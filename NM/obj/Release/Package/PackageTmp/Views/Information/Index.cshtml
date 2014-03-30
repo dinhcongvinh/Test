@@ -1,0 +1,26 @@
+﻿@model NM.Imformation
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+ <div class="panel-wrapper"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>@Model.NamesInformation</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form id="formthemsanpham" method="post" action="/Information/EditContact" enctype="multipart/form-data" > 
+                	  
+                    <div class="group fixed"> <label>Nội dung thông tin</label> <br /><br /> <textarea class="ckeditor required" id="editor1" rows="10" cols="5" name="detailInformation">@Model.DetailInformation</textarea> </div>
+                                 
+                    <center> <input type="submit" class="button-blue" value="Cập nhật"></center>
+                    
+				</form>
+			<!-- ## / Panel Content  --> </div> 
+		</div>
+        	<div class="shadow"></div> 
+        </div>
+        
+
+

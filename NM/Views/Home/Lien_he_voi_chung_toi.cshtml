@@ -1,0 +1,7 @@
+﻿@model NM.Imformation
+@{
+    ViewBag.Title = "Lien_he_voi_chung_toi";
+    Layout = "~/Views/Shared/_LayoutDetail.cshtml";
+}
+
+@Html.Raw(Server.HtmlDecode(Model.DetailInformation))

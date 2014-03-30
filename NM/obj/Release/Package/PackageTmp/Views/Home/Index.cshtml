@@ -1,0 +1,167 @@
+﻿@model IEnumerable<NM.SelectProductIndexResult>
+@{
+    
+}
+<style>
+
+    .itemdc1 {
+        color:white!important;
+    }
+    .itemdc2 {
+        color:#ffd800!important;
+    }
+    .itemdc3 {
+        color:#ffd800!important;
+    }
+</style>
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script>
+
+    function LoadPages(i) {
+        var url = '/Home/Paging?pagenumber=' + i;
+        $('#mainShowProduct').load(url);
+        $('.item_colections').removeClass("item_colections").addClass("item_colection");
+        $('#' + i).addClass("item_colections");
+    }
+
+    function LoadPagesCBO() {
+        var imageName = $('#imagessleted').val();
+        var url = '/Home/Paging?pagenumber=' + imageName;
+        $('#mainShowProduct').load(url);
+    }
+
+</script>
+
+     
+    <select id="imagessleted" class="styled-select"  onchange="LoadPagesCBO()">
+        @for (int number = 1; number <= (int)ViewBag.pagenumber; number++)
+        {
+            <option  value="@number">@number</option>                       
+        }           
+    </select>
+    
+
+<div style="clear:both"></div>
+@if (int.Parse(Session["View"].ToString()) == 2)
+{
+    <div id="mainShowProduct">
+        @{int count = 1;
+
+          foreach (var item in Model)
+          {
+                    <div class="list-deal-o1">  
+			            <section class="deal deal-img product-offer">   
+				            <a href="/Home/ProductDetail/@item.AliasCategory/@item.AliasProduct/@item.IDProduct" class="aImgDeal1">            
+					            <h1>        
+					            <img class="imagessProduct" width="180" height="180" src="~/@item.ImagesLogoProduct" alt="@item.NamesProduct" style="display: block;">        
+					            </h1>  
+                            
+				            </a>
+				   
+				            <span class=""></span>    
+				            <div class="offer-detail1">          
+					            <div class="info-offer">     
+						            <div>	
+                                        <br />							
+							            <div class="bg_title1">                      
+								            <a class="tit ltit" href="/Home/ProductDetail/@item.AliasCategory/@item.AliasProduct/@item.IDProduct"> 
+									            <h1>@item.NamesProduct</h1>             
+								            </a> 
+							            </div>   
+                                        <br />
+							            <a class="info">  &nbsp; &nbsp;  &nbsp;                
+								            <span class="p_info1">               
+									            <span class="icon_price"></span>                          
+									            <span class="price-offer">@int.Parse(item.PriceProduct.ToString()).ToString("0,0 VNĐ")<sup>đ</sup></span><span class="space">&nbsp;|</span>  
+									           @if(item.CostProduct==0)
+                                                {} else
+                                                { <span class="del"><del>@int.Parse(item.CostProduct.ToString()).ToString("0,0 VNĐ")</del><sup>đ</sup></span>                       
+                                                }
+								            </span>                
+										                   
+							            </a> 
+                                        <br />
+                                           <br />
+                                        
+                                       @if(item.TypeProduct ==1)
+                                        { 
+                                         <a class="deliver-icon1">
+					                        <p class="countBuy1">  <span>Hàng nhập khẩu từ Mỹ &nbsp;&nbsp; </span> &nbsp;&nbsp; </p>
+				                        </a>  
+                                         }
+                                           
+                                      
+						            </div>           
+					            </div>       
+				            </div> 
+			            </section>
+		            </div>  
+                                       if (count % 2 != 0)
+                                       {
+                        <div style="float:left; width:90px; height:100px;"></div>  
+                                       }
+                                       count++;
+          }        
+        }
+ 
+     </div>
+}
+else
+{
+    <div id="mainShowProduct">
+    @foreach (var item in Model)
+    {
+            <div class="list-deal-o">  
+			    <section class="deal deal-img product-offer">   
+				    <a href="/Home/ProductDetail/@item.AliasCategory/@item.AliasProduct/@item.IDProduct" class="aImgDeal">            
+					    <h1>        
+					    <img width="220" height="260" src="~/@item.ImagesLogoProduct" alt="@item.NamesProduct" style="display: block;">        
+					    </h1>      
+				    </a>
+                    @if (item.TypeProduct == 1)
+                    {
+				   <a class="deliver-icon">
+					    <p style="float:right">Hàng nhập khẩu từ Mỹ &nbsp;&nbsp; </p> &nbsp;&nbsp; <img style="float:right; margin-top:4px;" src="~/Frondend_files/images/flower.png" />
+				    </a>
+                    }
+				    <span class=""></span>    
+				    <div class="offer-detail">          
+					    <div class="info-offer">     
+						    <div>								
+							    <div class="bg_title">                      
+								    <a class="tit ltit" href="/Home/ProductDetail/@item.AliasCategory/@item.AliasProduct/@item.IDProduct"> 
+									    <h1>@item.NamesProduct</h1>             
+								    </a> 
+							    </div>   
+							    <a class="info">                
+								    <span class="p_info" >               
+									    <span class="icon_price"></span>                          
+									    <span class="price-offer">@int.Parse(item.PriceProduct.ToString()).ToString("0,0 vnđ")<sup>đ</sup></span><span class="space">&nbsp;|</span>  
+									    @if(item.CostProduct==0)
+                                                {} else
+                                                 {<span class="del"><del>@int.Parse(item.CostProduct.ToString()).ToString("0,0 vnđ")</del><sup>đ</sup></span>                       
+                                                        }
+								    </span>                
+										                   
+							    </a>                
+						    </div>           
+					    </div>       
+				    </div> 
+			    </section>
+		    </div>    
+    }
+ </div>         
+}
+<div style="clear:both"></div>
+
+<div class="Collectionpage" >  
+    <div class="pagesrcoll">
+        @for (int number = 1; number <= (int)ViewBag.pagenumber; number++)
+        {
+            <a href="#ctl00_Body_Main_dMenuView"><div onclick="LoadPages(@number)" id="@number" class="item_colection">@number</div> </a>
+        }
+           
+     </div>
+</div>
+
+<br /><br />

@@ -1,0 +1,116 @@
+/* CONTENT - PRODUCT Detail */
+
+#shopping .pddt_box{
+	width:868px;
+	margin-top:15px;
+	box-shadow:0px 0px 7px #000;
+	background-color:#fff;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+#shopping .pddt_bg01{
+	background:url(../img/common/pdt_bg01.png) no-repeat;
+	width:868px;
+	height:15px;
+}
+#shopping .pddt_bg02{
+	background:url(../img/common/pdt_bg02.png) repeat-y;
+	width:700px;
+}
+#shopping .pddt_bg03{
+	background:url(../img/common/pdt_bg03.png) no-repeat;
+	width:868px;
+	height:15px;
+}
+#shopping .pddt_bg03cart{
+	background:url(../img/common/pdt_bg03cart.png) no-repeat;
+	width:868px;
+	height:15px;
+}
+#shopping .pddt_title{
+	text-shadow: -1px 0 #e28f0c, 0 1px #e28f0c, 1px 0 #e28f0c, 0 -1px #e28f0c, 0 0 5px #000; 
+	font-size:13px; 
+	color:#fff;
+}
+#shopping .pddt_price{
+	font-size:14px;
+	font-weight:700;
+}
+#shopping .pddt_descbg{
+	background:#123a7d;
+	width:405px;
+	height:265px;
+	color:#fff;
+}
+#shopping .pddt_line25{
+	border-bottom:#fff 1px solid;
+	height:25px;
+}
+#shopping .pddt_line35{
+	border-bottom:#fff 1px solid;
+	height:35px;
+}
+#shopping .pddt_linel{
+	border-left:#fff 1px solid;
+	height:25px;
+}
+#shopping .pddt_link{
+	color:#fff;
+	text-decoration:none;
+	font-weight:700;
+}
+#shopping .pddt_link:visited{
+	color:#fff;
+	text-decoration:none;
+	font-weight:700;
+}
+#shopping .pddt_cartline01{
+	border-bottom:#e28f0c 1px dotted;
+}
+#shopping .pddt_cartline02{
+	border-bottom:#e28f0c 1px solid;
+	padding-bottom:5px;
+	font-weight:700;
+}
+#shopping .pddt_cartline03{
+	border-bottom:#123a7d 1px dotted;
+	padding-bottom:5px;
+}
+#shopping .pddt_sum{
+	height:40px;
+	background:#f8c08c;
+	width:700px;
+	margin-left:3px;
+	color:#d45b04;
+}
+#shopping .pddt_title_small{
+	text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff, 0 0 5px #000; 
+	font-size:12px; 
+	color:#e28f0c;
+	font-weight:700;
+}
+#shopping .pddt_input{
+	border:#123a7d solid 1px;
+	height:25px;
+	width:400px;
+}
+#shopping .pddt_inputr{
+	border:#123a7d solid 1px;
+	height:25px;
+	width:300px;
+}
+#shopping .pddt_inputcode{
+	border:#123a7d solid 1px;
+	height:25px;
+	width:193px;
+}
+#shopping .pddt_area{
+	border:#123a7d solid 1px;
+	height:150px;
+	width:400px;
+}
+#shopping .pddt_list{
+	border:#123a7d solid 1px;
+	width:190px;
+	height:30px;
+}

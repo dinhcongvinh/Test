@@ -1,0 +1,1396 @@
+/**/
+a {color: #368ed8;}/*P fix 22/7*/
+body{font-family:arial;font-size:13px;line-height:1.231;background:#f0f0f0;position:relative}
+.container{width:1218px;margin:0 auto;position:relative;}.wrapper{width:100%;position:relative;}
+.item-input.input input::-webkit-input-placeholder { color:#8B8B8B; }
+.item-input.input input::-moz-placeholder { color:#8B8B8B; } /* firefox 19+ */
+.item-input.input input::-ms-input-placeholder { color:#8B8B8B; } /* ie */       
+/*tabs-header*/
+.tabs-header{z-index:2;width:100%; height:122px; background-image:url(images/backtop.PNG) ; 
+             background-repeat:repeat-x; }
+.mod-innerHeader{height:100%;margin:auto;position:relative;width:978px;}
+/*--gr-tabs--*/
+.gr-tabs{height:29px;width:978px;margin:auto;}
+.gr-tabs p{margin-left:12px;font-size:12px;line-height:27px;text-align:right;float:left;position:relative;margin-top:1px}
+.gr-tabs a, .gr-tabs span{display:inline-block;color:#ffffff;font-size:13px;font-weight:bold}
+.gr-tabs a:hover{color:#ffffff;}
+.gr-tabs span{padding:0 5px;}
+    .gr-tabs p { 
+    }
+/*--tabs-header-inner--*/
+.tabs-header-inner{width:978px;margin:0 auto;height:1px;position:relative;z-index:1; clear:both;}
+.tabs-header-inner ul{float:left;left:35px;top:5px;position:relative;}
+.tabs-header-inner li{float:left;margin-left:1px;}
+.tabs-header-inner li a{float:left;width:107px;background-image:none;padding-left:0px;background-repeat:no-repeat;background-position:0 0;display:inline-block;}
+.tabs-header-inner li a.active,.tabs-header-inner li a:hover{background-position:0 -50px;}
+.tabs-header-inner li a i{display:block;margin:auto;background-image:url(http://www.nhommuahotdeals.net/nhomMuaV5/images/gr-logo.png);background-repeat:no-repeat;height:30px;margin-top:4px}
+.tabs-header-inner li a.active, .tabs-header-inner li a:hover
+{
+    -webkit-transition:height 0.5s;
+    -o-transition:height 0.5s;
+    -moz-transition:height 0.5s}
+.tabs-header-inner .feed{background-image:none;background-repeat:no-repeat;background-position:0 0;width:51px !important;}
+/*--header-cart--*/
+.header-cart{position:absolute;z-index:2;right:0;top:4px;width:445px;height:25px;
+             border-radius:0 0 6px 6px;
+             -moz-border-radius:0 0 6px 6px;
+             -webkit-border-radius:0 0 6px 6px;}
+.header-cart .text{width:68px;float:left;height:37px;background:url(http://www.nhommuahotdeals.net/nhomMuaV5/images/header-cart.png) right 0 no-repeat;padding:30px 14px 0 7px;color:#333;font-size:12px;line-height:16px;}
+.header-cart .bg-cart{margin:auto 0 auto auto;width:242px;height:37px;padding-top:36px;float:right;
+                      border-radius:0 0 7px 0;
+                      -moz-border-radius:0 0 7px 0;
+                      -webkit-border-radius:0 0 7px 0;}
+.gr-register{position:absolute;top:2px;right:2px;float:left;height:23px}
+.gr-register .avatar{float:left;border:1px solid #000;margin-right:12px;display:block;}
+.gr-register .avatar img{border:1px solid #fff;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;margin-right:0;}
+.gr-register a,.gr-register span{display:inline-block;font-size:12px;color:#ffffff;line-height:18px;float:left}
+.gr-register span{padding:0 6px;}
+.gr-register .nick{font-weight:700;color:#469ddf;}
+.gr-register a:hover{text-decoration:none;}
+.gr-register a i{color:#0095da;font-weight:700;}
+.gr-register p{float:left}
+.modBoxPF{float:left;position:relative}
+.viewPF{height:25px}
+.viewOD,.viewLK{height:23px}
+.viewPF:hover .modACC{opacity:1;visibility:visible}
+.viewOD:hover .modBoxODLK{opacity:1;visibility:visible}.viewOD:hover .icoOD{opacity:1}
+.viewLK:hover .modBoxODLK{opacity:1;visibility:visible}.viewLK:hover .icoLK{opacity:1}
+.modBoxODLK{opacity:0;visibility:hidden;width:350px;/*-moz-transition:all 0.3s linear;-webkit-transition:all 0.3s linear;-o-transition:all 0.3s linear;transition:all 0.3s linear*/;background-color:#191919;position:absolute;top:23px;z-index:3;right:-8px;border-radius:0 0 10px 10px;-webkit-border-radius:0 0 10px 10px;-moz-border-radius:0 0 10px 10px;-o-border-radius:0 0 10px 10px;box-shadow:2px 2px 3px #333333;-o-box-shadow:2px 2px 3px #333333;-webkit-box-shadow:2px 2px 3px #333333;-moz-box-shadow:2px 2px 3px #333333;}
+.titleOD{border-bottom:1px solid #8C8C8C;width:97%;padding-bottom:10px}
+.titleOD_bot{border:none;border-top:1px solid #8C8C8C;padding:0;padding-top:10px;margin-top:5px;width:97%}
+.innerBoxODLK{width:320px;float:left;margin:20px 0 20px 20px;max-height:565px}
+.innerBoxODLK p,.detailDealOD p{color:#949494;font-size:13px;}
+.dealOD{position:relative;height:91px;margin-bottom:10px;float:left;border-bottom:1px solid #8c8c8c;width:310px}
+.detailDealOD p font sup{top:3px;position:relative}
+.listDealOD{width:100%;float:left;clear:both;margin-top:0px;}
+.listDealOD a{float:left}
+.detailDealOD{position:relative;float:left;margin-left:8px;width:246px}
+.detailDealOD a{width:215px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;color:#949494;font-size:13px;font-weight:bold}
+.detailDealOD p{clear:left;line-height:15px;font-size:12px}
+.listDealOD a img{border:1px solid #eeeeee;border-radius:2px}
+.detailDealOD .btn-thanhtoan,.detailDealOD .btn-thanhtoan a{width:61px;height:25px;padding:0}
+.detailDealOD .btn-thanhtoan{margin-top:5px;clear:left;float:left;}
+.detailDealOD .btn-thanhtoan a i{color:#fff;font-size:13px;line-height:24px}
+.detailDealOD .countdownTime{float:right;color:#0095da;font-size:12px;margin:10px 0 0 0px;font-style:italic;padding:0;text-align:right}
+.icoOD,.icoLK{-moz-transition:all 0.2s linear;-webkit-transition:all 0.2s linear;-o-transition:all 0.2s linear;transition:all 0.2s linear;opacity:0.3}
+.countOD i{display:block;width:25px;float:left;height:18px;font-size:12px;color:white !important;text-align:center}
+.delDeal{position:absolute;top:0;right:0;width:13px;height:13px;background:url("images/navi.png");background-position:-228px -109px;padding:0 !important;margin:0 !important;cursor:pointer}
+.likeDeal{background:url("images/navi.png");width:30px;height:30px;background-position:-124px -234px;position:absolute;display:block;top:30px;right:5px;z-index:3;cursor:pointer;visibility:hidden;opacity:0;}
+.more-deal .list-deal-o .likeDeal{top:5px}
+.likeDeal-focus,.likeDeal:hover{background-position:-124px -190px}
+.icoHeart{background:url("images/navi.png");width:15px;height:15px;background-position:-197px -140px;position:absolute;display:block;top:9px;right:9px;z-index:20;cursor:pointer}
+
+/*--support--*/
+.dSupport{width:257px;height:272px;top:29px;left:399px}
+.contentSupport{float:left;width:223px;height:243px;float:left;margin:15px 0 0 15px;}
+.infoSupport{float:left;margin-top:12px;}
+.icoSupport{background:url("images/navi.png") -170px -223px;width:33px;height:32px;float:left;display:block;margin-left:14px;margin-top:3px}
+.hotLine{float:left;font-size:15px;color:#f6f604;font-weight:bold;margin-left:20px}
+.timeSupport{width:100%;float:left;clear:both;margin-top:5px;font-size:13px;color:#cbcbcb;font-style:italic;margin-left:8px}
+.icoMail{background:url("images/navi.png") -214px -223px;width:33px;height:32px;float:left;display:block;margin-left:14px;margin-top:9px;clear:both}
+.mailSupport{font-size:13px;color:#cbcbcb;float:left;font-weight:bold;margin:16px 0 0 7px;}
+.yahoo{clear:left;width:auto;float:left;margin:10px 0 0 8px;}.yahoo a{float:left;margin-right:5px}
+.tabs-header-inner .yahoo{position: absolute;left: 432px;top: 10px;}
+
+
+/*sectionBody*/
+.sectionBody{position:relative;display:block;z-index:1;min-height:588px;display:inline-block;width:100%}
+.sectionEmail
+{/*background-color:#0095da;*/
+ background-repeat:repeat;
+ background-image:url("images/bg_test.png");
+ box-shadow:0px 1px 4px rgba(0,0,0,0.5);
+ -moz-box-shadow:0px 1px 4px rgba(0,0,0,0.5);-webkit-box-shadow:0px 1px 4px rgba(0,0,0,0.5);-moz-box-shadow:0px 1px 4px rgba(0,0,0,0.5);-ms-box-shadow:0px 1px 4px rgba(0,0,0,0.5);top: 0px;left:0;z-index: 4;width: 100%;position:absolute}
+.nhommua:hover i,.nhommua.active i{background-position:0 -135px;}
+.zap:hover i,.zap.active i{background-position:0 -180px;}
+.hungry:hover i,.hungry.active i{background-position:0 -225px;}
+.kay:hover i,.kay.active i{background-position:0 -323px;}
+.nhommua i{background-position:0 0;width:92px;}
+.zap i{background-position:0 -45px;width:57px;}
+.hungry i{background-position:0 -90px;width:85px;}
+.kay i{background-position:0 -272px;width:49px;}
+
+.header-ddl p{display:block;width:19px;height:27px;margin-top:-1px;background-image:url("images/navi.png");background-position:-122px -100px}
+.amo-cart{width:248px;height:42px;/*background-image:url("images/bg_repeat.png");*/
+          background-color:white;
+          position:relative;top:5px;border-radius:10px;-o-border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;background-position:0 -153px}
+.amo-cart a{margin-top:5px}
+.btn-pay i{background:url(images/giohang.png) right -21px no-repeat;padding-right:10px;font-size:13px;color:#fff;font-weight:700;text-shadow:-1px -1px 1px rgba(199, 103,0,0.34);line-height:27px;}
+
+.bg-header .bg-cart{float:right}.bg-header .bg-cart .amo-cart{top:5px}
+.bg-cart .cart{background:url(images/giohang.png) no-repeat;line-height:37px;padding-left:20px;color:#ffff00;font-weight:700;font-size:15px;float:left;margin-left:14px;position:relative;width:105px;padding-right:8px;text-align:right;}
+.bg-cart .cart sup{text-decoration:underline;}
+.bg-cart .cart:hover{text-decoration:none;}
+.bg-cart .cart i{color:red;font-size:12px;height:16px; font-weight:bold;
+                 line-height:16px;width:20px;position:absolute;font-weight:400;text-align:center;left:7px;top:15px;}
+.bg-cart .line{width:0;height:47px;float:left;border-left:1px solid #626060;border-right:1px solid #c1bfbe;display:inline-block;margin-left:8px;}
+.btn-thanhtoan{float:right;margin-top:6px; margin-right:6px;  display:block}
+.btn-thanhtoan a{display:block;height:27px;background-image: url("images/bg_test.png");border:1px solid #47880c;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;box-shadow:0 3px 4px rgba(0,0,0,0.35);color:#fff;width:92px;background-position:0 -277px}
+.btn-thanhtoan a i{font-size:13px;font-weight:700;display:block;text-align:center;text-shadow:-1px 1px 1px rgba(56,159,47,0.34);line-height:27px;}
+
+.btn-addgiohang{margin-top:6px;display:block}
+.btn-addgiohang a{display:block;height:27px;background:#5cb834 url("images/bg_repeat.png") repeat-x;border:1px solid #47880c;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;box-shadow:0 3px 4px rgba(0,0,0,0.35);color:#fff;width:100% ;background-position:0 -277px}
+.btn-addgiohang a i{font-size:13px;font-weight:700;display:block;text-align:center;text-shadow:-1px 1px 1px rgba(56,159,47,0.34);line-height:27px;}
+
+.header-ddl{clear:both;height:27px;float:left;position:relative;z-index:1;top:11px}
+.header-ddl p{line-height:27px;float:left;font-size:13px;color:#333;}
+.header-select{float:left;margin-top:5px;height:23px;margin-left:0px}
+.header-select .text{display:inline-block;height:18px;width:87px;padding:0 21px 0 7px;position:relative;font-size:13px;color:#000;line-height:19px;text-transform:uppercase;font-weight:bold;}
+.header-select .text i{position:absolute;top:0;right:0;height:16px;width:21px;cursor:pointer;display:block;background:url(http://www.nhommuahotdeals.net/nhomMuaV5/images/header-cart.png) 0 -282px;z-index:1;}
+.header-select .toggle{border:1px solid #fff;width:113px;padding-top:21px;position:relative;top:-21px;}
+.header-select .toggle ul{background-color:#fff;margin-left:-1px;left:0}
+.header-select .toggle li{font-size:13px;color:#000;line-height:24px;text-transform:uppercase;border-top:1px solid #ccc;cursor:pointer;float:left;width:114px}
+.header-select .toggle li:hover{background-color:#ccc;}
+.bg-footer{width:100%;background-color:#121212;font-size:13px;color:#666;line-height:20px;clear:both}
+.bg-footer .container{padding:29px 0 15px 0;overflow:hidden;width:1180px}
+.bg-footer .line{height:0;font-size:0;margin:6px 0 8px 0;display:inline-block;}
+.bg-footer .col-l{width:275px;float:left;margin-right:53px}
+.bg-footer .col-l p{text-align:right;clear:both;}
+.bg-footer .col-l a{color:#666;}
+.bg-footer .col-l a:hover{text-decoration:underline;color:#0095da;}
+.bg-footer .col-r{width:840px;float:left;margin-top:-9px;}
+.bg-footer .col-r h6{text-transform:uppercase;font-size:13px;font-weight:700;color:#fff;line-height:28px;border-bottom:1px solid #333;margin-bottom:12px;}
+.bg-footer .col-r li{float:left}
+.bg-footer .col-r li a,.bg-footer .col-r li span{display:block;line-height:20px;color:#666;-moz-transition:all 0.2s ease-in 0s;transition:all 0.2s ease-in 0s;-webkit-transition:all 0.2s ease-in 0s;-o-transition:all 0.2s ease-in 0s;}
+.bg-footer .col-r li a:hover{color:#fff;text-decoration:underline;}
+.bg-footer-b{width:100%;background-color:#fff;clear:left;overflow:hidden;}
+.bg-footer-b p{width:1218px;margin:0 auto;text-align:right;color:#333;line-height:27px;}
+.bg-footer-b p span{float:left;text-align:left;}
+.gr-register .taikhoan{float:left;text-align:right;}
+.taikhoan span{color:#333;display:block;clear:both;line-height:18px;}
+.taikhoan span i{position:relative;top:-4px;font-size:10px;}
+.shadows{width:100%;height:100%;position:fixed;top:0;left:0;background:#000;opacity:0.85;z-index:11;display:none;}
+
+.footer-share{width:280px;position:relative;left:-7px;top:6px;}
+.footer-share a{float:left;display:inline-block;height:29px;width:29px;background-image:url(http://www.nhommuahotdeals.net/nhomMuaV5/images/share.png);background-repeat:no-repeat;margin:0 3px;}
+.footer-share .facebook{background-position:0 0;}
+.footer-share .twitter{background-position:-40px 0;}
+.footer-share .in{background-position:-80px 0;}
+.footer-share .t{background-position:-120px 0;}
+.footer-share .youtube{background-position:-160px 0;}
+.footer-share .e{background-position:-200px 0;}
+.footer-share .g{background-position:-240px 0;}
+.footer-share .zing{background-position:-280px 0;}
+.footer-share .yume{background-position:-320px 0;}
+.footer-share .blogspot{background-position:-360px 0;}
+.fo-hunry .col-l a:hover{color:#ff3300;}
+.fo-zap .col-l a:hover{color:#66cc33;}
+.fo-zap .col-r li .viewmore{position:relative;display:inline-block;}
+.fo-zap .col-r li .viewmore:hover{color:#66cc33;}
+.viewmore i{position:absolute;right:-20px;top:0;display:none;}
+.viewmore:hover i{display:block;}
+
+.header-select .text{color:#0095DA}
+.hightlight-products h1 i{margin-top:4px}
+
+.header-select .toggle{-moz-transition:all 0.3s linear;-webkit-transition:all 0.3s linear;-o-transition:all 0.3s linear;transition:all 0.3s linear;display:block;opacity:0;visibility:hidden;}
+.header-select:hover .toggle{opacity:1;visibility:visible;}
+.order-detail a{cursor:pointer}.contact-footer{float:right !important;width:264px;}
+.help-footer{padding-left:116px;}
+section{position:relative}
+
+.header-select .text{color:#0095DA}
+.hightlight-products h1 i{margin-top:4px}.col-r{float:left}
+
+.logo{float:left;position:relative;margin-left:12px;margin-top:12px;padding:0;border:none;clear:left}
+.sub-nav-inner{float:left;margin-top:15px;overflow:hidden;padding-left:5px;width:900px;}
+.sub-nav-inner li{float:left;position:relative;z-index:2}
+.sub-nav-inner a{color:#FFFFFF;float:left;height:35px;line-height:35px;padding:0 10px;}
+.sub-nav-inner a em{font-size:14px;font-weight:bold;font-family:arial;}
+.sub-nav-inner a:hover em{color:#0095DA;text-shadow:0px 1px 2px #C1C0C0;}
+.gr-deal-o{position:relative;width:598px;height:424px;margin-right:21px;float:left}
+
+.offer-detail{width:100%;height:92px;margin:auto;position:absolute;bottom:-58px;left:0}
+.topdeal-o{position:absolute;top:-4px;left:-4px;display:block;background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/shadow-deal.png?v=2");background-position:-394px -210px;width:76px;height:76px;}
+.meta-offer{width:174px;height:30px;margin:auto;display:block;background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/bg-title-travel.png")}
+
+.bann8_3 ,.deal-304{background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/shadow-deal.png?v=2");display: block;height: 75px;width: 75px;position: absolute;z-index: 3;top: -5px;left:-5px;background-position:-394px -515px;}
+.deal-16{background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/shadow-deal.png?v=2") -290px -457px;width:68px;height:59px;position:absolute;top:-16px;left:-10px;z-index:3}
+.cashback-3{background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/shadow-deal.png?v=2") -280px -520px;width:80px;height:80px;position:absolute;top:-9px;left:-9px;z-index:3}
+.cashback-5{background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/shadow-deal.png?v=2") -280px -600px;width:80px;height:80px;position:absolute;top:-9px;left:-9px;z-index:3}
+.meta-offer{-moz-transition:all 0.7s ease-out;transition:all 0.7s ease-out;-o-transition:all 0.7s ease-out;-webkit-transition:all 0.7s ease-out;width:174px;height:26px;margin:auto;display:block;background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/bg-title-travel.png")}
+.meta-offer a{float:left;display:block;width:174px;height:21px;color:White;font-size:12px;line-height:21px;}
+.meta-offer a sup{font-size:12px;}
+.price-offer{color:#0095da;border-right:none !important;font-weight:bold;width:93px !important;border-left:1px solid #fff;font-size:15px}
+.meta-offer a span{height:23px;display:block;float:left;padding-top:4px;width:93px;text-align:center;font-size:17px}
+.info-offer{float:left;display:table-cell;height:79px;width:100%;background-color:white;margin-top:0px}
+.info-offer .aTitleDeal,.info-offer .aTitle_more{width:213px;height:30px;margin:auto;text-align:center;color:Black;}
+.offer-desc{color:#000;display:block;line-height:15px;font-size:13px;text-align:center;}
+.offer-detail .h2.offer-desc:before{border-bottom:1px solid #cccccc;content:"";display:block;height:0;margin:0 auto 12px;width:120px;}
+.info-offer .aTitleDeal h1{font-size:14px;font-weight:bold;display:block;}
+.offer-detail h1{padding:0 10px 10px}
+.offer-detail .info-offer a{color:#333;}
+.offer-detail .info-offer a.info{border-top: 1px solid #ededed;height: 32px;display:block}
+.offer-detail .info-offer a.info {line-height:32px;padding:0 10px;float:left}
+.icon_price{background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/ico.png") 0px 0px;height:15px;width:15px;display:inline-block;vertical-align:middle;margin-right:0px}
+.space{margin:0 0px;color:#929292}
+.info .del{color:#929292}
+.info sup{text-decoration:underline}
+.down_percent{/*color:#c50007;font-size:12px;font-weight:bold;float:right;line-height:29px;margin-right:10px*/float: right;margin: 2px 3px 2px 2px;position:relative}
+.down_percent img{opacity:0.7;filter:alpha(opacity=70)}
+.offer-detail .info-offer a h1 .decr{color:#838383;font-size:12px;font-weight:normal;line-height: 16px;}
+.offer-detail .info-offer a h1{font-weight:bold}
+.offer-detail .info-offer .oneline-offer{padding-top:10px;}
+.offer-detail .moreline-offer .h2.offer-desc:before{margin:0 auto 3px}
+.h2{height:33px;font-size:12px;overflow:hidden}
+.gr-deal-focus .deliver-icon,.gr-deal-o .deliver-icon,.list-deal-o .deliver-icon,.travel-o .deliver-icon{background:url("images/bg_repeat.png") repeat-x 0px -480px;right:0px;top:0px;height:16px;padding:5px;width:100%}
+.moreline-offer a h1{padding-top:5px;padding-bottom:5px}
+.gr-deal-o .deliver-icon{width:100%}
+.innerResFilter .gr-deal-o .deliver-icon{width:100%}
+.list-deal-o .deliver-icon{width:100%}
+.gr-deal-focus .deliver-icon,.gr-deal-o .deliver-icon,.list-deal-o .deliver-icon,.travel-o .deliver-icon{opacity:1}
+.gr-deal-focus:hover .deliver-icon,.gr-deal-o:hover .deliver-icon,.list-deal-o:hover .deliver-icon,.travel-o:hover .deliver-icon{opacity:100;moz-transition: opacity 0.7s;
+transition: opacity 1s;
+-o-transition: opacity 1s;
+-webkit-transition: opacity 1s;}/*fix 10/7*/
+
+/*.offer-detail .info-offer a h1{text-align:center}*/
+.sectionSlideDeal{width:100%;float:left;margin-bottom:20px;position:relative;z-index:1;}
+.offer-detail .info-offer a.tit{height: 40px;overflow: hidden;display: block;margin-bottom:14px}
+.list-deal-o .offer-detail .info-offer a.tit{height: 40px;margin-bottom: 4px;}
+.offer-detail .info-offer a.tit h1{height: 32px;display: table-cell;width: 100%;vertical-align: middle;overflow: hidden;line-height: 17px;padding:7px 10px;}
+.list-deal-o .offer-detail .info-offer a.tit h1{padding-top:6px}
+/*.offer-detail .info-offer a.tit.ltit h1{width:462px}*/
+.deal-focus-o{height:298px;float:left;margin-bottom:30px;width:792px;margin-left:5px;}
+.banner-news-deal-o{background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/dealmoi-o.png");width:74px;height:74px;}
+.infoFocus-offer{width:247px;position:absolute;right:0;top:0;height:100%;background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/shadow-new.png")}
+.wrapper-offer .btn{margin-top:30px}
+.wrapper-offer{padding:35px 0 0 30px;width:190px}
+.wrapper-offer h1{font-size:24px;font-weight:bold;color:white}
+.wrapper-offer p{color:White;font-size:13px;line-height:18px;padding-top:20px}
+.list-deal-o
+{position:relative;width:230px ;height:330px;float:left;margin-bottom:20px;
+
+ background-color:white;
+ -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+.top-deal .list-deal-o .deal-img a h1 img{border:none;border:1px solid #d1d1d1}
+.list-deal-o section{width:235px;float:left;height:290px}
+.list-deal-o .offer-detail{width:225px;}
+.list-deal-o .deliver-icon{right:0px;}
+.list-deal-o .offer-detail .info-offer{width:235px}
+.moreline-offer h1{height:32px;text-align:center;overflow:hidden;}
+.oneline-offer h1{height:17px;text-align:center}
+.list-deal-o .info-offer{width:222px}
+.gr-deal-o section{height:299px}
+.innerResFilter .gr-deal-o section{height:224px}
+.list-deal-o section a h1 img{width:235px;height:265px;color: transparent;}
+
+.deal-img:hover .meta-offer{background:none;background:none repeat scroll 0 0 rgba(0, 149, 218, 0.8)}
+.lifestyle-offer:hover .meta-offer{background:none;background:none repeat scroll 0 0 rgba(0, 149, 218, 0.8)}
+.travel-offer:hover .meta-offer{background:none;background:none repeat scroll 0 0 rgba(0, 149, 218, 0.8)}
+.product-offer:hover .meta-offer{background:none;background:none repeat scroll 0 0 rgba(0, 149, 218, 0.8)}
+.coffee-offer:hover .meta-offer{background:none;background:none repeat scroll 0 0 rgba(0, 149, 218, 0.8)}
+.spa-offer:hover .meta-offer{background:none;background:none repeat scroll 0 0 rgba(0, 149, 218, 0.8)}
+.topdeal-offer:hover .meta-offer{background:none;background:none repeat scroll 0 0 rgba(0, 149, 218, 0.8)}
+.dTopDeal{float:left;margin-bottom:10px;position:relative}
+.hgroup{width:100%}.top-deal .deal .sub-menuNew .sub-nav-inner{margin-left:0 !important;padding-left:0 !important}.top-deal .deal .sub-menuNew .sub-nav-inner a{height:36px;padding-top:0}
+.sub-menuNew{margin:0;width:820px;}.top-deal .deal .sub-menuNew .sub-nav-inner a i,.top-deal .deal .sub-menuNew .sub-nav-inner a p{float:left;background-repeat:no-repeat}
+.top-deal .deal .sub-menuNew .sub-nav-inner a i{margin-top:5px;}.top-deal .deal .sub-menuNew .sub-nav-inner a p{margin:10px 0 0 5px;font-size:13px;font-family:Arial;color:#333333 !important;font-weight:normal !important}
+.sub-menuNew,.sub-menuNew nav ul,.sub-menuNew nav ul li{height:38px !important;}.sub-menuNew{margin-bottom:15px;}
+.sub-nav-inner a{z-index:10}.sub-nav-inner #selected a em{color:#0095DA;text-shadow:0px 1px 2px #C1C0C0;}
+.sectionSubMenu{background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/bg-subMenu.gif");float:left;height:39px;width:100%;}
+.deliver-icon{padding:0;height:39px !important;opacity:1;overflow:hidden;padding:0 !important}
+.micro_line{font-size:12px;font-weight:normal;margin-left:2px}
+.deal-img:hover .deliver-icon{opacity:1;height:39px !important;/*-moz-transition:all 0.25s linear;transition:all 0.25s linear;-webkit-transition:all 0.25s linear;-o-transition:all 0.25s linear*/}
+.deliver-icon span{margin-top:5px;margin-bottom:5px;padding-right:5px;background-repeat:no-repeat}.deliver-icon p{padding-left:5px;margin-top:7px}
+.slide-img{position:relative}
+.prev, .next{background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/detail.png");background-repeat:no-repeat;cursor:pointer;display:block;height:47px;position:absolute;top:190px;width:47px;}
+.prev{background-position:0 0;left:0px;}.next{background-position:-50px 0;right:0px;}
+.viewby{background-image:url("images/navi.png");width:50px;height:22px;float:left;margin-top:9px;background-position:-2px -342px}
+.viewby i{float:left;height:22px;width:22px;display:block;cursor:pointer;margin:0}
+.bygrid{background-image:url("images/navi.png");background-position:-53px -342px}
+.bylist{background-image:url("images/navi.png");background-position:-78px -342px;margin-left:5px !important}
+.offer-detail .info-offer a h1{font-size:14px;line-height:18px}
+
+.viewType{float:right;margin-right:2px;margin-right:10px;}
+.dTopdeal{width:1218px;margin:0 auto;clear:both;clear:both;display:block;position:relative;height:auto;}
+.gr-deal-focus section{position:relative}
+.info-dealFocus .amo-focus{margin:auto;}.amo-focus h1{font-size:20px;font-weight:bold;color:white;width:100%;height:30px;overflow:hidden;line-height:31px;text-align: center;margin-top:8px}/*P 19/8*/
+.amo-focus p{width:100%;overflow:hidden;line-height:20px;font-size:14px;color:White;padding-top:20px;height:58px;text-align:center}
+.amo-focus p.price{font-size: 15px;height: 20px;padding-top: 0px;}
+.info-dealFocus{background-image:url("images/shadow-new.png");height:80px;position:absolute;bottom:0;left:0;width:100%;}
+.gr-deal-o section .offer-detail{width:100%;height:111px;}
+/*.gr-deal-o section .info-offer a.tit.ltit h1{width:360px}
+.gr-deal-o .offer-detail .info-offer a h1{font-size:16px !important;}*/
+.gr-deal-fix{margin-right:0}.deliver-icon p{float:right;font-size:11px;font-style:italic;}
+.deliver-icon .countBuy{background-position:left center;display:block;float:right;height:26px;line-height:26px;margin-top:0;padding-top:7px;font-style:italic}
+.deliver-icon .countBuy b{font-style:normal;font-size:12px}
+.deliver-icon span{background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/icon-deliver.png");float:right;height:15px;margin-left:5px;width:20px;}.deliver-icon .deli-freeship{background-position:0 -22px;display:block;height:15px;}
+.deliver-icon .deli-voucher{background-position:0 -43px;display:block;height:16px;}
+.deliver-icon .deli-nhomMua{background-position:0 0;display:block;height:15px}
+.deliver-icon .deli-e-voucher{background-position:0 -63px;display:block;height:16px;}
+.deliver-icon{color:#FFFFFF;opacity:1;position:absolute;z-index:3;}
+
+.shadow-offer{display:block;width:476px;height:54px;background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/shadow-deal.png");background-position:0 0;margin:auto;}
+.sectionSubMenu{width:100%;background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/bg-subMenu.gif");height:39px;}
+    .sectionSubMenu .sub-menuNew .sub-nav-inner a i 
+{float:left;background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/icon-orga.png");
+ display:block;height:22px;left:0;margin-top:8px;position:relative;top:0;width:22px;}
+.sectionSubMenu .sub-menuNew .sub-nav-inner .hotTime i{background-position:-73px 0px;margin-top:9px}
+.sectionSubMenu .sub-menuNew .sub-nav-inner .hotPrice i{background-position:-118px 1px;}
+.sectionSubMenu .sub-menuNew .sub-nav-inner .hotCompa i{background-position:-114px -32px;}
+.sectionSubMenu .sub-menuNew .sub-nav-inner .best_promo i{background-position:-170px 0px;}
+.sectionSubMenu .sub-menuNew .sub-nav-inner .active.hotTime i{background-position:-50px 0;}
+.sectionSubMenu .sub-menuNew .sub-nav-inner .active.hotPrice i{background-position:-95px 0px;margin:0;margin-top:9px}
+.sectionSubMenu .sub-menuNew .sub-nav-inner .active.hotCompa i{background-position:-114px 0;}
+.sectionSubMenu .sub-menuNew .sub-nav-inner .active.best_promo i{background-position:-145px 0;}
+.sectionSubMenu .sub-menuNew .sub-nav-inner a.hotTime:hover i{background-position:-50px 0;}
+.sectionSubMenu .sub-menuNew .sub-nav-inner a.hotPrice:hover i{background-position:-95px 0px;margin:0;margin-top:9px}
+.sectionSubMenu .sub-menuNew .sub-nav-inner a.hotCompa:hover i{background-position:-119px 0;}
+.sectionSubMenu .sub-menuNew .sub-nav-inner a.best_promo:hover i{background-position:-145px 0;}
+.sectionSubMenu .sub-menuNew .sub-nav-inner .active.dealToday i{background-position:0 0;margin-top:8px;height:23px !important;width:23px !important;}
+.sectionSubMenu .sub-menuNew .sub-nav-inner a.dealToday:hover i{background-position:0 0;margin-top:8px;height:23px !important;width:23px !important;}
+.sectionSubMenu .sub-menuNew .sub-nav-inner .dealToday i{background-position:-25px 0;height:23px !important;width:23px !important;}/*P fix 24/7*/
+.cate-1{width:140px;}.cate-2{width:140px}/*03.06.2013*/
+.sectionSubMenu .sub-menuNew nav{width:590px;margin:auto;height:38px;float:left}
+.sectionSubMenu .sub-menuNew .sub-nav-inner li .subMN-sp{width:1px;display:block;float:left;height:38px;margin-top:0;display:block;background-color:#ccc}
+.sectionSubMenu .sub-nav-inner a .active .subMN-sp,.sectionSubMenu .sub-nav-inner a:hover .subMN-sp{display:none}
+.sectionSubMenu .sub-nav-inner{margin:0;padding:0;width:590px;margin:auto;position:relative}
+.sectionSubMenu .sub-menuNew{width:1180px;margin:auto;height:38px;}
+.sectionSubMenu .sub-nav-inner a{background-color:Transparent;height:36px;
+                border-right:1px solid #5fafd5;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;-o-border-radius:0;}
+.sectionSubMenu .sub-menuNew nav ul li{height:38px !important}
+.sectionSubMenu .sub-menuNew .sub-nav-inner a p{color:#a4cde9;font-family:Arial;font-size:12px;font-weight:bold !important;margin:3px 0 0 5px;float:left;}
+.sectionSubMenu .sub-menuNew .sub-nav-inner li .subMN-sp{width:1px;background-color:#999;display:block;float:left;height:38px;margin-top:0;}
+.sectionSubMenu .sub-nav-inner a.active,.sectionSubMenu .sub-nav-inner a:hover{border-bottom:1px solid #1a4f68}
+.sectionListDeal{width:100%;position:relative;display:block;padding-bottom:0px;float:left;padding-top:20px}/*P fix 22/7*/.mod-inner-list,.dListDeal{width:1180px;margin:auto;display:block;position:relative}.dListDeal{float:left}
+.dv-banner{float:left;width:1180px;margin:10px 0 10px 0px;height:90px;}
+.inner-listDeal{width:1180px;float:left;clear:both}
+.shadow-list{width:232px;height:49px;background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/shadow-deal.png");display:block;margin:auto;background-position:0 -505px}
+.dealTravel{width:1180px;margin:auto;position:relative;display:block;clear:both}.dealTravel h1 i{border-top:1px solid #666;display:block;font-size:0;width:100%;position:relative;top:20px;z-index:1}
+.dealTravel h1 span{font-size:22px;color:#333;float:left;position:absolute;z-index:2;display:inline-block;padding-right:8px}.dealTravel h1{position:relative;height:23px;}
+.inner-travel{float:left;width:1180px;}.inner-travel{float:left;width:100%;margin-top:18px;}.travel-o section{clear:both}
+.travel-o,.travel-o section{float:left;width:579px;height:311px;position:relative;}.travel-o{margin-right:22px;margin-bottom:20px}.travel-none{margin-right:0}
+.dTime{background-color:#333333;position:relative;right:0;top:0;width:577px;float:left;margin:auto;height:38px;background:#0095da}
+.travel-o section a h1 img{width:577px;height:219px}
+.amo-deal{width:577px;height:256px;border:1px solid white}.deal-rate{float:right;margin-top:10px;margin-right:10px}
+.iconTime{background-image:url("images/navi.png");float:left;height:13px;margin:12px 5px 0 0px;width:13px;background-position:-150px -273px}
+.dTime span{color:white;float:left;font-size:11px;margin-top:13px;}.deal-rate ul li{background:url("images/navi.png") no-repeat scroll -129px -273px transparent;display:block;float:left;height:14px;margin-left:2px;width:12px;}.deal-rate ul{display:inline-block;margin:2px 3px 0 0;padding-left:5px;}
+
+.btn{background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/button/button.png");display:block;cursor:pointer}
+.btnRead{width:107px;height:50px;margin-top:24px;background-position:0 0;position:relative;left:-5px}.btnRead:hover{background-position:0 -64px}.btnRead:active{background-position:0 -129px}
+.share{width:36px;padding:0;position:absolute;top:15px;left:-40px}.module{clear:left;}
+.share a{margin-bottom:5px;background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/ico.png");background-repeat:no-repeat;display:inline-block;float:left;height:26px;margin-left:5px;width:26px;-moz-transition:background 0.2s linear 0s;-webkit-transition:background 0.2s linear 0s;-o-transition:background 0.2s linear 0s;transition:background 0.2s linear 0s;}
+.share .pin{background-position:-154px -290px;}
+.share .twitter{background-position:-123px -290px;}
+.share .google{background-position:-62px -290px;}
+.share .yume{background-position:-31px -290px;}
+.share .zing{background-position:-92px -290px;}
+.share .facebook{background-position:0 -290px;}
+.share .pin:hover, .share .pin.active{background-position:-154px -330px;}
+.share .twitter:hover, .share .twitter.active{background-position:-123px -330px;}
+.share .google:hover, .share .google.active{background-position:-62px -330px;}
+.share .yume:hover, .share .yume.active{background-position:-31px -330px;}
+.share .zing:hover, .share .zing.active{background-position:-92px -330px;}
+.share .facebook:hover, .share .facebook.active{background-position:0 -330px;}
+.listVDeal{border-bottom:1px solid #E2E7E9;height:270px;width:100%;margin:auto;margin-top:25px}
+.infoListVDeal .imgLV{background-color:White;border:1px solid #CCCCCC;box-shadow:2px 2px 5px #CCCCCC;display:block;float:left;height:245px;width:389px;}
+.infoListVDeal a h1 img{padding:3px 0 0 3px;}
+.infoListVDeal{z-index:2;position:relative;float:left;height:246px;position:relative;width:730px;}
+.amo-listVDeal{z-index:2;position:relative;float:left;text-align:center;width:238px;margin:45px 0 0 55px}
+.ttListVDeal{float:left;height:155px;margin-left:16px;margin-top:55px;overflow:hidden;width:240px;position:relative;}
+.ttListVDeal h1{color:#333333;font-family:Arial;font-size:16px;max-height:40px;overflow:hidden;text-transform:uppercase;padding-top:35px;font-weight:bold;}
+.desLVDeal{color:#333333;font-family:Arial;font-size:13px;line-height:18px;padding-top:15px;max-height:54px;overflow:hidden}
+.navi-lv{background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/navi-lv.png");display:block;height:20px;position:absolute;right:-10px;top:88px;}
+.amo-listVDeal .pPriceLV{color:#333333;font-size:13px;padding-top:7px;}
+.countLV span{font-size:12px;background-image:url("images/navi.png");background-repeat:no-repeat;color:#666666;height:13px;padding-left:18px;background-position:0 -323px}
+.amo-listVDeal .pSalePriceLV{color:#0095DA;font-family:Arial;font-size:32px;padding-top:3px}.countLV{padding-top:15px;}
+.amo-listVDeal .pPriceLV sup{font-size:11px;}
+.btnReadNow{background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/button/btnReadnow.png");display:block;height:62px;margin:8px auto auto;width:237px;}
+.btnReadNow:hover{background-position:0 -80px;}.btnReadNow:active{background-position:0 -160px;}
+.infoListVDeal .deliver-icon{color:#333333;opacity:1;right:0px;height:auto !important;top:0}.infoListVDeal .deliver-icon span{background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/ico-deli-lv.png");}.infoListVDeal .deliver-icon p{color:#666;}
+.infoListVDeal a img{width:377px;height:233px;padding:6px 0 0 6px}.pSalePriceLV sup{font-size:22px}.infoListVDeal{margin-left:78px}
+.line-list{background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/line-list.png");width:11px;height:162px;position:absolute;top:50px;right:0;display:block}
+.dSlideTop3Deal{width:7500px;}
+.gold-deal-list{background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/bg-gold-deal.png") repeat scroll 0 0 transparent;}
+.listVDeal{margin:0 auto auto;padding-top:25px;position:relative}
+.amo-deal{width:577px;height:311px}
+.travel-o section .offer-detail{top:105px;height:119px;width:100%}
+.travel-o section .offer-detail .info-offer{height:73px;width:100%}
+.travel-o section .offer-detail .meta-offer{float:right !important;margin-left:0 !important;margin-right:1px !important}
+.travel-o section .offer-detail .info-offer{border:none;box-shadow:none;margin-top:0}
+.infoTravel{width:100%;height:40px;border-bottom:1px solid #ccc}
+.info-offer .infoTravel h1,.info-offer .infoTravel p{width:94%;padding:10px 15px;font-size:15px;color:#333;text-transform:uppercase;font-weight:bold;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.info-offer .infoTravel p{padding:0 15px;font-size:12px;text-transform:none;font-weight:normal}
+.dTime span{color:#333 !important;float:right;margin-right:8px;margin-top:11px}.dTime{height:32px;background:none}.iconTime{float:right;margin-top:10px}
+.deal-rate{border-left:1px solid #999;margin-right:5px;margin-top:8px}
+.travel-o .deliver-icon .deli-voucher{background-position:0 -105px;float:left;background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/deli-detail.png");padding-right:0;margin-right:0;margin-left:10px}
+
+.travel-o .deliver-icon{top:4px;height:26px !important;opacity:1 !important;position:relative !important;}
+.travel-o .deliver-icon p{padding-left:2px}
+.deal-img .imgTravel h1{background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/loader.gif") no-repeat scroll center center transparent;}
+.travel-o .deliver-icon .deli-nhommua{background-position:0 -62px;float:left;background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/deli-detail.png");padding-right:0;margin-right:0;margin-left:10px}
+.travel-o .deliver-icon .deli-freeship{background-position:0 -84px;float:left;background-image:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/deli-detail.png");padding-right:0;margin-right:0;margin-left:10px}
+.sectionSubMenu .sub-menuNew{background:url("images/bg_test.png");background-position:0 -234px;  background-color:none!important;}.sectionSubMenu{background:none}
+.sub-nav-inner a em{font-family:NhomMuaSmBd;font-weight:normal;font-size:15px}.meta-offer,.meta-offer a{width:190px;}
+.hori-line{height:1px;display:block;margin:auto;width:222px;background:none repeat scroll 0px 0px rgb(204, 204, 204);margin-top:10px;margin-bottom:15px}
+.pop-up .success span.pop-up-img{background:url("http://www.nhommuahotdeals.net/images_v2/pop-up-success.png") no-repeat scroll 0 0 transparent;width:20px;}
+.pop-up .success span{color:#006699;}
+.pop-up span.pop-up-img{background:url("http://www.nhommuahotdeals.net/images_v2/pop-up.png") no-repeat scroll 0 0 transparent;display:inline-block;height:20px;margin:16px 16px 0 0;width:19px;}
+.pop-up{background-color:White;box-shadow:0px 1px 3px #666 !important;clear:both;-o-box-shadow:0px 1px 3px #666 !important;-moz-box-shadow:0px 1px 3px #666 !important;-webkit-box-shadow:0px 1px 3px #666 !important;color:#FF6600;font-family:Arial;font-size:22px;height:67px;overflow:hidden;text-align:center;width:100%;}
+.popup-error-text{display:inline-block;margin-top:-2px;padding-top:15px;vertical-align:top;}
+.gr-deal-focus{margin-bottom:13px;}
+.btn-Slide #thumbs{display:inline-block;overflow:hidden;}.btn-Slide #thumbs li{display:inline-block;float:left;margin-left:0;}
+.btn-Slide li a{text-align:center;font-family:Arial;cursor:pointer;display:block;font-weight:bold;line-height:18px;height:9px;width:9px;background-position:-76px -233px;display:block;margin-top:3px;color:#000;font-size:13px;margin:auto;margin-top:2px;line-height:19px;background:#a5a5a5;border-radius:15px;-o-border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;-ms-border-radius:15px;}
+.btn-Slide .activeSlide a,.btn-Slide li a:hover{text-align:center;font-size:13px;color:white;background-color:#ffffff}
+.btn-Slide #thumbs li p{float:left;width:24px}/*P 19/8*/
+
+.dBannerTabMenu{width:1218px;margin:auto;clear:both;margin-bottom:20px;}
+.dListDealCate .dBannerTabMenu{margin-left:12px}
+.dTopdeal,.dv-banner{width:978px}.sectionSlideDeal{width:100%;float:none;margin:auto;padding-top: 52px;}.logos-inner{width:940px;}
+
+
+.dv-banner{overflow:hidden}
+
+.sectionSubMenu{margin-top:0px; background-color:none!important}
+.header{height:52px;margin:auto;position:relative;width:978px;}.container{width:978px}.bg-footer .container{width:978px}
+.sub-nav-inner{padding-left:5px;width:800px}.sub-nav-inner a em{font-size:15px;}.sub-nav-inner a{padding:0 10px}
+.gr-deal-focus{position:relative;width:756px;height:467px;float:left;margin:0 auto;margin-bottom:13px}
+.sectionSubMenu .sub-menuNew,.bg-footer-b p{width:978px;margin:auto}
+.gr-deal-o{width:482px;height:360px;margin-right:14px;margin-top:20px}
+.gr-deal-o section a h1 img{width:482px;height:298px}
+.gr-deal-fix{margin-right:0}
+.mod-inner-list, .dListDeal,.dealTravel,.inner-travel,.inner-listDeal{width:978px;}
+.list-deal-o{margin-left:0;margin-right:14.5px !important}
+.travel-o section a h1 img{width:480px;height:183px}.travel-o, .travel-o section{width:482px;height:269px;}.dTime{width:480px}.travel-o section .imgTravel{width:480px;height:183px}
+.amo-deal{width:480px;height:255px}.travel-o{margin-bottom:20px;margin-right:14px;}.travel-none{margin-right:0}
+.bg-footer .col-l{width:25%;}.bg-footer .col-r{width:75%}.help-footer{padding-left:30px;}.contact-footer{padding-left:0px}/*11.07.2013*/
+.sectionEmail,.bg-footer,.tabs-header,.sectionSubMenu{min-width:978px}
+.listVDeal{width:100%;}.infoListVDeal .imgLV{width:359px;height:226px;}.infoListVDeal a img{width:349px;height:216px;padding:5px 0 0 5px}.infoListVDeal{width:678px;}
+.listVDeal,.infoListVDeal{height:253px}.amo-listVDeal{margin-left:13px;}.infoListVDeal{margin-left:24px}
+.dSlideTop3Deal_Cont{width:756px;overflow:hidden;height:467px;position:relative;float:right;margin-bottom:20px}.dSlideTop3Deal{width:7500px;}.gr-deal-o{margin-top:0px;}
+.gold-deal-list .gold-list{height:100%;background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/gold_list.png");width:978px;height:278px;position:absolute;display:block;top:0px;left:2px;background-position:0 -294px;}
+.btn-Slide{position:absolute;bottom:4px;left:318px;}/*P 19/8*/
+.dBannerTabMenu{width:978px;margin:auto;clear:both;margin-bottom:20px;}
+.dListDealCate .dBannerTabMenu{margin-left:0px}.sub-nav-inner{padding-left:25px;width:775px}
+.no-deal{font-size:18px;text-align:center;margin:20px 0px;}
+#sgd{width:96px !Important;height:62px !important}
+.sharegoogle{opacity:0;}
+.header-select .toggle li a{display:block}
+.secEmail-bot{background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/bgt-email.png");width:100%;height:42px;position:fixed;bottom:0;left:0;z-index:8}
+.inner-EmailBot{width:755px;margin:6px auto auto;height:30px;}.inner-EmailBot span,.inner-EmailBot div{float:left}.inner-EmailBot span{font-size:14px;color:#8c8b8b;margin:6px 15px 0 0}
+.inner-EmailBot div{width:306px;height:30px;background:#5c5c5c;border-radius:0 5px 5px 0;-moz-border-radius:0 5px 5px 0;-o-border-radius:0 5px 5px 0;-webkit-border-radius:0 5px 5px 0;position:relative}.inputEmail .green{position:absolute;right:0;width:50px;height:30px;border-radius:5px;display:block;-moz-border-radius:5px;-webkit-border-radius:5px;-o-border-radius:5px;float:right;top:0}
+.green span{color:#FFFFFF;font-size:13px;font-weight:700;line-height:27px;text-shadow:0 0 1px rgba(56, 159, 47, 0.34);padding:2px 13px 0 13px;margin:0}
+.ipEmail{width:216px;height:20px;margin-top:5px;background:none;border:none;font-size:13px;color:white;padding-left:34px}.inputEmail{position:relative}
+.iconInput{width:16px;height:13px;background:url("images/navi.png");position:absolute;top:9px;left:10px;background-position:0 -80px}
+.green{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.01, #6dbf49),color-stop(1.00, #52a32e));background:-moz-linear-gradient(center top,#6dbf49 1%,#52a32e 100%);background:-o-linear-gradient(top, #6dbf49, #52a32e);}
+.gold-deal .info-offer{background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/bg-gold-deal.png") repeat scroll 0 0 transparent;border-left:1px solid #D1D128;border-bottom:1px solid #D1D128;border-right:1px solid #D1D128;}
+.gold-deal .offer-detail .h2.offer-desc:before{border-bottom:1px solid #B8B84A}
+.gold-deal .info-dealFocus .btnRead{background-position:-323px -0px;width:137px;height:60px;top:14px;left:-12px;position:relative;margin-top:0}
+.scrollMenu{position:fixed;top:0;z-index:5;left:0;width:100%;}
+
+.feed{position:relative;width:54px;}
+.feed .count-feed{background-color:Red;border-radius:2px 2px 2px 2px;color:White;font-size:10px;height:13px;position:absolute;right:8px;text-align:center;top:6px;width:20px;}
+.feed i{width:26px;margin-top:10px !important;margin-left:10px !important;background-position:-115px -326px;}
+#secEmail_Bot{width:100%;height:42px;position:relative;display:none;z-index:5;}
+.div-shadow{width:100%;height:100%;background:#000;position:fixed;top:0;left:0;z-index:6;opacity:0.8;display:none;}
+.errorEmail{width:314px;height:80px;background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/shadow-deal.png?v=2");background-position:0 -262px;position:absolute;right:1px;top:-80px}
+.errorEmail span{font-size:19px;color:#ff6600;font-family:Arial;float:left;margin:22px 0 0 0}.errorEmail i{float:left;display:block;background:url("images/navi.png");width:19px;height:19px;background-position:-47px -28px;margin:24px 5px 0 30px}
+.inner-EmailBot{position:relative}
+.h2{font-size:13px;height:36px;line-height:16px;}
+.pastdeal .price-offer{border-right:1px solid #999 !important;}
+.countBuy{padding-top:0px !important;background-image:url("images/people.png");padding-left:17px !important;background-repeat:no-repeat;margin-left:5px}
+.travel-o .countBuy{background-image:url("images/navi.png");background-position:0 -213px;font-size:12px;float:left;border:none;margin-left:15px;margin-top:8px;}
+.travel-o .countBuy{padding-top:3px !important;padding-left:20px !important}
+.backtotop{bottom:58px;position:fixed;right:10px;z-index:5;display:none;} /*P fix 23/7*/
+.backtotop span{background:url("images/navi.png") no-repeat scroll -115px -343px transparent;cursor:pointer;display:inline-block;height:50px;width:50px;}
+
+
+.thumbnail ul li{font-size:0}
+.longSelect{height:36px;width:360px;display:block;font-size:15px;font-weight:bold;line-height:36px;float:left;box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2) inset;-webkit-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2) inset;-o-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2) inset;-moz-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2) inset;border-radius:5px 5px 5px 5px;-moz-border-radius:5px 5px 5px 5px;-objUser-border-radius:5px 5px 5px 5px;-webkit-border-radius:5px 5px 5px 5px;border:1px solid rgb(153, 153, 153);margin-top:0px;padding-top:0px;margin-left:0px;padding-left:0px;padding-bottom:0px;text-align:center;vertical-align:middle;}
+.shortSelect{height:36px;width:78px;display:block;font-size:15px;font-weight:bold;line-height:36px;float:none;box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2) inset;-webkit-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2) inset;-o-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2) inset;-moz-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2) inset;border-radius:5px 5px 5px 5px;-moz-border-radius:5px 5px 5px 5px;-objUser-border-radius:5px 5px 5px 5px;-webkit-border-radius:5px 5px 5px 5px;border:1px solid rgb(153, 153, 153);margin-top:0px;padding-top:0px;margin-left:0px;padding-left:0px;padding-bottom:0px;text-align:center;vertical-align:middle;}
+.ppIntCart{width:748px;height:692px;position:absolute;top:10%;left:30%;z-index:20;background:#fff}.ppIntCart span{display:block;width:748px;height:580px;background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/bgPPCart.jpg");box-shadow:0 0 3px #666;-moz-box-shadow:0 0 3px #666;-webkit-box-shadow:0 0 3px #666;-o-box-shadow:0 0 3px #666;position:relative}
+.btn-ppCart{width:364px;margin:auto;clear:left;margin-top:30px}.btn-ppCart a{display:block;float:left;background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/button/button.png");width:167px;height:50px;cursor:pointer}
+.btn-ppCart .btnLikeCart{background-position:-133px -475px}.btn-ppCart .btnLikeCart:hover{background-position:-133px -555px}.btn-ppCart .btnLikeCart:active{background-position:-133px -634px}
+.btn-ppCart .btnUnlikeCart{margin-left:28px;background-position:-333px -530px}.btn-ppCart .btnUnlikeCart:hover{background-position:-333px -610px}.btn-ppCart .btnUnlikeCart:active{background-position:-333px -689px}
+.closePopup{background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/closePopup.png") repeat scroll 0 0 transparent;display:block;height:28px;position:absolute;right:0;top:0;width:28px;cursor:pointer}
+.icoppCart{background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/icoAbCart.png");width:86px;height:66px;position:absolute;top:9px;right:-80px;cursor:pointer;display:none}
+.loadAjax{background:url("http://www.nhommuahotdeals.net/nhomMuaV5/images/ajaxLoad.gif");width:40px;height:40px;position:absolute;z-index:4;background-repeat:no-repeat;width:100%;height:638px;background-color:rgba(0,0,0,0.6);background-position:center;display:block}
+.spnlin{width:1px;height:24px;background:#acacac;float:left;margin:11px 0 0 14px;}.list-deal-fix{margin-right:0 !important}
+.sectionSubMenu .sub-menuNew .sub-nav-inner .active p{color:#ffffff;}
+.dSlideTop3Deal .deliver-icon{right:0;top:0}
+.showPf{width:8px;height:4px;background-image:url("images/navi.png");background-position:-127px -142px;margin-top:8px;right:0;position:relative;padding:0 !important;margin-left:3px}
+.sectionSubMenu .sub-menuNew nav ul li:hover a p{color:#ffffff !important}.sectionSubMenu .menu-travel nav ul li:hover a p{color:#0095da !important}
+.amo-focus p span{font-size:14px}
+.meta-offer a span del{font-size:14px}.modACC{width:177px;height:126px;background-color:#191919;position:absolute;top:23px;z-index:3;right:-2px;border-radius:0 0 10px 10px;-webkit-border-radius:0 0 10px 10px;-moz-border-radius:0 0 10px 10px;-o-border-radius:0 0 10px 10px;box-shadow:2px 2px 3px #333333;-o-box-shadow:2px 2px 3px #333333;-webkit-box-shadow:2px 2px 3px #333333;-moz-box-shadow:2px 2px 3px #333333;}
+.innerACC{width:150px;margin:auto;margin-top:15px;float:left;margin-left:16px;}.innerACC p{color:#949494;font-size:13px;line-height:24px;float:left;clear:both;}.featureACC{width:144px;border-top:1px solid #8c8c8c;border-bottom:1px solid #8c8c8c;line-height:20px !important;padding:3px 0}
+.featureACC a{float:left;clear:left;color:#cbcbcb;margin-left:10px;font-weight:bold;width:110px}/*P fix 24/7*/
+.logout{margin-left:10px;color:#cbcbcb !important;font-weight:bold;display:block;margin-top:4px;font-size:13px}
+
+.dv-banner .bannerMid-1,.dv-banner .bannerMid-2,.dv-banner .bannerBot-1,.dv-banner .bannerBot-2{float:left;}.dv-banner{margin:15px 0; }/*P fix 22/7*/
+.dv-banner .bannerMid-1{width:728px;margin:0 14px 0 3px;height:90px;}.dv-banner .bannerMid-2{width:230px;height:90px;}.banner-bot{border-bottom:1px solid #a5a5a5;margin:0px 0 32px 0; }/*P fix 22/7*/
+.dv-banner .bannerBot-1,.dv-banner .bannerBot-2{width:468px;height:60px;}.dv-banner .bannerBot-1{margin:0 11px 0 16px}
+.showAll{padding:0 !important;float:left;background-position:-122px -162px !important;background-image:url("images/navi.png") !important;float:right;font-size:16px !important;position:relative;right:0;width:26px;height:20px;}
+.viewAll{margin-top:3px;position:relative;right:0;float:right;display:block;font-size:16px;color:#333333}.viewAll b{font-weight:normal;float:left;padding-right:35px}
+.dvBrands{position:relative;margin:auto;clear:both;margin:auto;width:100%;margin-bottom:13px}
+.listBrands{background:#ffffff;width:951px;height:88px;border:2px solid #d3d3d3;float:left;margin-top:25px;border-radius:6px 6px 0 0;-o-border-radius:6px 6px 0 0;-moz-border-radius:6px 6px 0 0;-webkit-border-radius:6px 6px 0 0;margin-left:12px}
+.leftBrand,.rightBrand{cursor:pointer;width:27px;height:29px;background:url("images/navi.png");position:absolute;top:56px}.leftBrand{background-position:0 -369px;left:-1px}.rightBrand{background-position:-27px -369px;right:-1px}
+.labelBrands{display:none;font-size:16px;font-family:NhomMuaMedium;color:#4f83b5;background-color:#E5E5E5;top:10px;width:135px;color:#4F83B5;font-family:NhomMuaMedium;font-size:18px;left:43%;position:absolute;text-align:center;}.countOD{background-image:url("images/navi.png");width:29px;height:19px;background-position:-157px -164px;font-weight:bold;padding:0 0 0 5px!important;}
+.showAllBrand{color:#ff4800;font-size:13px;float:right;margin-top:8px;font-weight:bold;margin-bottom:14px;display:block;visibility:hidden}.innerListBrand{height:52px;width:924px;margin:auto;overflow:hidden;margin-top:19px;}.ulBrands{width:10000px;height:52px;float:left;}.ulBrands li,.ulBrands li a{width:125px;height:50px;float:left}.ulBrands li{margin-right:35px}
+.amo-brandText{margin-top:8px;}.amo-brandText,.amo-brandText p,.amo-brandText span,.amo-brandText p,.amo-brandText div,.amo-brandText a,.amo-brandText b,.amo-brandText{color:#fff !important;font:13px/17px Arial, Helvetica, Geneva, sans-serif !important;height:auto !important;}.amo-brandText b{font-weight:bold;}.amo-brandText p{padding-top:0px;}.bg-footer{position:relative;z-index:2}
+
+
+.deal-img:hover .likeDeal{visibility:visible;opacity:1;
+                        transition: opacity 0.5s;
+                        -o-transition: opacity 0.5s;
+                        -webkit-transition: opacity 0.5s;}
+.slide-img:hover .likeDeal{visibility:visible;opacity:1;
+                        transition: opacity 0.5s;
+                        -o-transition: opacity 0.5s;
+                        -webkit-transition: opacity 0.5s;}
+.infoListVDeal:hover .likeDeal{visibility:visible;}
+.bannerHeader{width:302px;height:53px;float:right;margin:0;padding:0}
+.mainMenu{width:217px;height:52px;float:left;position:relative}
+/*ToanVo_Demo_KhongXoa*/
+.mainMenu:hover .child_shadow{display:block} 
+.mainMenu .child_shadow{display:none} 
+.child_shadow.active{display:block} 
+/*ToanVo_Demo_KhongXoa*/
+.labelMenu{display:block;float:left;color:White;font-size:16px;font-weight:bold;margin-left:12px;cursor:pointer;margin-top:17px;-moz-user-select: none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;-o-user-select: none}
+.showSubMenu{background-image:url("images/navi.png");background-position:-180px -355px;width:7px;display:block;height:6px;display:inline-block}
+.contentMenu{width:207px;height:467px;position:absolute;float:left;top:52px;left:0;display:none;z-index:4;}/*.mainMenu:hover .contentMenu, */.focusIndex{display:block}
+.listMenu{width:207px;height:467px;float:left;position:relative;background:#ffffff;border-radius:0 0 10px 10px;-o-border-radius:0 0 10px 10px;-moz-border-radius:0 0 10px 10px;-webkit-border-radius:0 0 10px 10px;-ms-border-radius:0 0 10px 10px;border-radius:0 0 10px 10px;-o-border-radius:0 0 10px 10px;-moz-border-radius:0 0 10px 10px;-webkit-border-radius:0 0 10px 10px;-ms-border-radius:0 0 10px 10px;box-shadow:1px 3px 5px rgba(0, 0, 0, 0.5);-o-box-shadow:1px 3px 5px rgba(0, 0, 0, 0.5);-moz-box-shadow:1px 3px 5px rgba(0, 0, 0, 0.5);-webkit-box-shadow:1px 3px 5px rgba(0, 0, 0, 0.5);-ms-box-shadow:1px 3px 5px rgba(0, 0, 0, 0.5);}
+.listMenu .liCategory{width:100%;height:35px;position:relative;float:left;display:block;}
+.dNameCat{float:left;width:192px;margin-left:15px;position:relative;border-bottom:1px solid #e5e5e5;height:35px}
+.dNameCat.lastItem{border-bottom:0px}
+.listMenu .liCategory .mainCategory,.aBrandStore{float:left;display:block;font-size:12px;color:#5f5f5f;margin-top:0px;height:35px;line-height:35px;width:100%;cursor:pointer}.listMenu .liCategory .aBrandStore{font-size:14px;font-weight:bold;color:#000000 !important}
+.aBrandStore{height:50px}
+.aBrandStore span{display:block;font-size:10px;font-weight:normal;color:#aeaeae;line-height: 0px;margin-top: -3px;}
+.newRibbon{background-image:url("images/navi.png");width:13px;height:24px;background-position:-149px -300px;display:block;float:left;left:145px;position:absolute}
+.arrExpand{background-image:url("images/navi.png");width:7px;height:8px;background-position:-195px -366px;display:block;float:right;position:absolute;right:10px;top:14px}
+.aBrandStore .arrExpand{top:20px}
+.listMenu .focusCategory a{color:#0083bf !important;font-weight:bold}.focusCategory .arrExpand{background-position:-180px -366px;}
+.listMenu .liCategory:hover .arrExpand{background-position:-180px -366px;}
+.listMenu .liCategory:hover .dNameCat .mainCategory
+{color:#0083bf;font-weight:bold}.subCategory
+ {height:auto;position :absolute;left:207px;width:140px;opacity:0;visibility:hidden;-moz-transition:all 0.3s linear;-webkit-transition:all 0.3s linear;-o-transition:all 0.3s linear;transition:all 0.3s linear;}
+.viewAllSubs{float:left;cursor:pointer;font-weight:bold;font-size:15px;color:#0083bf !important;margin:13px 0 17px 25px}
+.innerSubCat
+{position:relative;width:140px;height:auto;padding-top:0px;background:#ffffff;float:left;
+  box-shadow:2px 3px 5px rgba(0, 0, 0, 0.3);-o-box-shadow:2px 3px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow:2px 3px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow:2px 3px 5px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow:2px 3px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 0 4px 4px 0}
+.labelSubCats{background:none;display:block;float:left;font-size:15px;font-weight:bold;color:#000000;cleaR:left;margin-left:25px;margin-top:10px}
+.modListSubs{float:left;clear:both;margin-left:25px;margin-top:6px}
+.listSubCats{float:left;position:relative;width:140px;/*min-width:140px;*//*border-right:1px solid #e5e5e5;padding-right:20px;*/}
+.listSubCats li{float:left!important;clear:left; line-height:25px;
+
+}
+.lineSubCat{float:left;width:30px;height:100%;background:#e5e5e5;display:block}.listSubNone{border:none}.shadowLeftSub{background:url(http://www.nhommuahotdeals.net/nhomMuaV5/images/shadowLeft-Sub.png);height:467px;position:absolute;left:0;top:0;display:block;width:8px}
+.imgSubCat{display:block;bottom:0;right:-9px;position:absolute}
+.listMenu .liCategory:hover .subCategory,.listMenu .liCategory.active .subCategory{visibility:visible;opacity:1}
+.listSubCats li{padding-left:8px}
+.dNameCat div{float:left;height:35px;width:20px}
+.listSubCats li::before {
+    content:url("images/liicon.png");
+    list-style: content;
+    margin-right:0px;
+    margin-left:-10px;
+    margin-top:8px;
+   
+}
+
+.listSubCats li:last-child {
+    border-bottom:none!important;
+}
+
+
+.listSubCats li {
+    
+    border-bottom:1px solid #0095da;
+    width:135px;  
+}
+.listSubCats .nameSubCat{padding-top:10px;font-weight:bold;padding-left:5px; float:left }
+.listSubCats .nameSubCat.nextSubCat{border-top:1px solid #e5e5e5;width:100%}.mod-innerTop{width:978px;float:left;position:relative}
+.listSubCats li a{font-size:13px;color:#000000;}.listSubCats 
+.nameSubCat a{font-size:12px;color:#0083bf}.listSubCats li a:hover{text-decoration:underline;color:#0083bf}
+.nameSubCat a .arrow{float:left;margin-right:5px;margin-top:4px;height:8px;width:5px;}
+.listMenu:hover{border-radius:0 0 0 10px;-o-border-radius:0 0 0 10px;-moz-border-radius:0 0 0 10px;-webkit-border-radius:0 0 0 10px;-ms-border-radius:0 0 0 10px;}
+.pagingMiddle{display:block;margin:18px 0 48px 0;float:left;width:978px;}
+.pagingMiddle a, .pagingMiddle span{color:#5E5E5E;font-size:15px;line-height:28px;margin:0 3px;padding:6px 11px;border:1px solid #bbbbbb;font-weight:bold;}
+.pagingMiddle a{background:#f2f2f2}
+.pagingMiddle a:hover, .pagingMiddle span{background:#9b9b9b;color:#ffffff;}
+.pagingMiddle a.btn-prev,.pagingMiddle a.btn-next{cursor:pointer;}
+.pagingMiddle a.btn-prev:hover, .pagingMiddle a.btn-next:hover{background:#9b9b9b;color:#ffffff;}
+.searchMain{width:500px;height:38px;position:relative;float:left;margin:7px 0 0 5px;background:url("images/bg_repeat.png") 0 -354px;border-radius:8px;-o-border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;-ms-border-radius:8px;}
+.searchMain .icon_clear_text{height:19px;width:19px;background:url("images/navi.png") -190px -410px;position:absolute;right:50px;top:9px;display:block;cursor:pointer}
+.selectCategory{position:relative;float:left;height:38px; width:300px}
+.selectCategory 
+.titleSelected{cursor:pointer;margin-top:1px;font-size:13px;font-weight:bold;
+               line-height:36px;padding:0 7px;float:left;height:36px;
+               }
+.selectCategory span i{display:inline-block;width:7px;height:7px;margin-left:5px}
+.keySearchMain{float:left;height:38px;}
+.keySearchMain input
+{float:left;outline:none;border:none;background:transparent;font-size:13px;padding-left:6px;
+ color:#000000;width:125px;margin-top:11px;
+ margin-left:10px;
+}
+.keySearchMain input::-webkit-input-placeholder { color:#bcbcbc; }
+.keySearchMain input::-moz-placeholder { color:#bcbcbc; } 
+.keySearchMain input:-ms-input-placeholder { color:#bcbcbc; }
+.keySearchMain input:-moz-placeholder { color:#bcbcbc;}
+.btnSearchMain
+{width:46px;height:38px;float:right;display:block;
+ border:none!important;
+ position:relative;margin-right:-1px;
+ border-bottom:none!important;
+ 
+}
+
+
+.btnSearchMain i{display:block;margin:auto;/*background:url("images/navi.png") -214px -355px;*/width:19px;height:19px;margin-top:10px}
+.listCatSearch{display:none;width:191px;background:#fff;border-radius:10px;left:0;-moz-border-radius:10px;-webkit-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;position:absolute;top:45px;box-shadow:0 0 5px rgba(0,0,0,0.5);-moz-box-shadow:0 0 5px rgba(0,0,0,0.5);-webkit-box-shadow:0 0 5px rgba(0,0,0,0.5);-o-box-shadow:0 0 5px rgba(0,0,0,0.5);-ms-box-shadow:0 0 5px rgba(0,0,0,0.5);z-index:2}
+.ulCatsSearch{float:left;width:158px;height:350px;margin-left:15px;}.ulCatsSearch li{float:left;height:34px;border-bottom:1px solid #e5e5e5;width:100%;}
+.ulCatsSearch li a{float:left;display:block;color:#000000;font-size:13px;cursor:pointer;margin-top:10px}
+.ulCatsSearch li a:hover{color:#0083BF;font-weight:bold;}
+.ulCatsSearch li .allCatsSearch{color:#000000}
+.ulCatsSearch li .allCatsSearch.active{font-weight:bold}
+.innerCatsSearch{float:left;width:100%;position:relative;}
+.arrowPPSearch{background:url("images/navi.png") 30px -425px;width:190px;height:10px;display:block;position:absolute;top:-10px;left:0px}
+
+.bottomAds{width:630px;float:left;clear:left;margin-bottom:30px; margin-top: 35px;}.modBotAds{width:978px;margin:auto;height:232px;overflow:hidden}
+.frameBotAds{width:320px;height:230px;margin-right:9px;float:left;box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+-o-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+-ms-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);}/*P fix 23/7*/
+.dealSearch{margin-top:20px;width: 980px;}/*P fix 5/8*/
+.labelResult{font-size:13px;color:#000000;float:left;width:100%;padding-bottom:12px;border-bottom:1px solid #cacaca;margin-bottom:20px;text-align:left}/*P fix 5/8*/
+.secInnerDeal{float:left;width:100%;position:relative;clear:both;padding-top:52px}
+.dListDealTab{width:978px;margin:auto;padding-top:20px}
+.modFilterLeft{float:left;width:224px;margin-right:20px}
+.resultFilter{width:732px;float:right}
+.optFilter{width:208px;padding:15px 0 20px 0;float:left;background:#ffffff;overflow:hidden;position:relative;box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2);-o-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2);-moz-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2);-ms-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2);-webkit-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2);margin-bottom:20px}
+/*.optFilter.cn.collapse{padding-bottom:0px;}
+.optFilter.cn.collapse ul.listOptFilter{display:none}*/
+.optFilter h1{height:25px;float:left;width:88%;font-size:15px;font-weight:bold;line-height:25px;padding-left:10px;color:#0083bf}/*P fix 22/7*/
+.listOptFilter{width:100%;float:left;position:relative;padding-bottom: 10px;}
+.listOptFilter li{float:left;width:180px;height:21px;clear:left;width:100%}.listOptFilter li input{float:left;margin-top:4px;margin-left:25px;}
+.listOptFilter li .labelFilter{float:left;color:#252525;font-size:13px;margin:3px 0 0 8px;cursor:pointer}.listOptFilter li .labelFilter:hover{color:#0083bf}
+.checkedFilter,.listOptFilter li:hover{background:#f5f5f5}
+.priceRank{width:165px;margin:2px 0 0 20px;background:url("images/bg_repeat.png") 0 -443px;float:left;height:18px;position:relative; border:none !important}/*ToanVo 04.07.2013*/
+.spControl{background:url("images/navi.png") -161px -190px !important;width:17px !important;height:18px !important;display:block !important;position:absolute !important;display:block !important;top:0 !important;border:none !important}/*ToanVo 04.07.2013*/
+.lowPrice{top:0;left:-2px}.highPrice{top:0;right:-2px}.detailRank{color:#252525;font-size:13px;float:left;clear:both;margin-left:12px;width:185px;text-align:center;margin-top:5px;line-height:20px}
+.rankProgress{position:relative !important;/*05.06.2013 float:right;width:100%*/;height:9px !important;margin-top:5px !important;background:#0095da !important;border:none !important}
+.current-path p a{color:#333333;}.current-path{float:left;margin:16px 0;}.current-path p{color:black;float:left;font-size:13px;}
+.current-path .aHome{background-image:url("images/navi.png");background-position:0 -28px;background-repeat:no-repeat;float:left;height:16px;width:27px;}
+.current-path p a:hover{text-decoration:underline;}/*13-06-2013*/
+.resultFilter .current-path{margin:3px 0 0 0px;float:left}.topResFilter{float:left;border-bottom:1px solid #cacaca;padding-bottom:10px;width:100%}
+.viewResultBy{float:right;height:27px;}.viewResultBy a{color:#000000;font-weight:bold;font-size:13px;padding:0 9px;height:27px;line-height:27px;background:#ffffff;border:1px solid #cacaca;float:left;display:block;margin-left:11px;cursor:pointer;}
+.viewResultBy .focusViewRes,.viewResultBy a:hover{color:#fff;background:#0095da;border:1px solid #0095da}.innerResFilter{float:left;width:732px;}
+.innerResFilter .gr-deal-o section a h1 img{width:360px;height:223px;}
+.innerResFilter .gr-deal-o{width:360px;height:285px;margin:20px 12px 20px 0px;}
+
+.list-deal-o:hover{margin-top:-2px;margin-bottom:22px;
+ box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-o-box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-moz-box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-ms-box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-moz-transition: all 170ms linear;
+-webkit-transition:  all 170ms linear;
+-o-transition:  all 170ms linear;
+transition:  all 170ms linear;}
+.gr-deal-o:hover{
+ box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-o-box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-moz-box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-ms-box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-moz-transition: all 170ms linear;
+-webkit-transition:  all 170ms linear;
+-o-transition:  all 170ms linear;
+transition:  all 170ms linear;}
+.list-deal-fix:hover{margin-bottom:22px}
+.innerResFilter .gr-deal-fix:hover{margin-bottom:20px}
+.pastdeal_page .list-deal-o:hover{margin-bottom:22px}
+.gr-deal-fix:hover{margin-bottom:0px}
+.list-deal-o,.gr-deal-o,.promotion_color_page .gr-deal-o{ box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2);
+-o-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2);
+-moz-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2);
+-ms-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.promotion_color_page .gr-deal-o:hover{top:-2px;
+ box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-o-box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-moz-box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-ms-box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow:0px 1px 4px rgba(0, 0, 0, 0.5);
+-moz-transition: all 170ms linear;
+-webkit-transition:  all 170ms linear;
+-o-transition:  all 170ms linear;
+transition:  all 170ms linear;}
+.promotion_color_page .gr-deal-o,.list-deal-o{-moz-transition: all 170ms linear;
+-webkit-transition:  all 170ms linear;
+-o-transition:  all 170ms linear;
+transition:  all 170ms linear;}
+
+.promotion_color_page .gr-deal-fix:hover{margin-bottom:20px}
+.innerResFilter .gr-deal-fix{margin-right:0}.resultFilter .pagingMiddle{width:732px;}
+.innerResFilter .gr-deal-o section .offer-detail,.innerResFilter .gr-deal-o section .shadow-offer{width:360px;}
+.innerResFilter .gr-deal-o section .shadow-offer{background:none;}
+.innerResFilter .gr-deal-o section .offer-detail .info-offer{width:360px;}
+/*Header update*/
+li.contact{margin: 4px 0 0 16px;padding-right:15px; width:165px;}
+.img_hotline{background: url("images/navi.png") no-repeat -290px -100px;width:13px;height:12px;float:left;margin: 2px 5px}
+.yahoo_v2{margin-top:5px;display:block; float:left}
+.yahoo_v2 span{font-weight:bold;font-size:11px;color:#828282}
+.yahoo_v2 img{float:left;margin:2px 5px}
+.tabs-header-inner li .yahoo_v2 a{width:160px;float:none}
+.noticeofnm{}
+.tabs-header-inner li a.bg_notice{background: url("images/navi.png") no-repeat -255px -120px;width:80px;height:34px;float:left;margin:3px 0 0 19px;color:#000000;font-size:11px;padding:10px 0px 0px 25px;font-weight:bold;cursor:pointer}
+
+/*deals*/
+.place_dist{
+height: 26px;margin: auto;display: block;position:absolute;top:9px;left:0;visibility:hidden;opacity:0;filter:alpha(opacity=0)}
+.place_dist a {float: left;display: block;color: white;font-size: 12px;line-height: 21px;}
+.place_dist a span {display: block;float: left;text-align: center;font-size: 12px;font-weight:bold;padding-right:7px;line-height:27px}
+.place_dist a .icon_dist{background: url("images/navi.png") no-repeat -255px -170px;width:10px;height:15px;float:left;margin: 6px 6px 5px 8px;padding-right:0px}
+.deal-img:hover .place_dist {
+visibility: visible;
+opacity: 1;filter:alpha(opacity=100);
+transition: opacity 0.5s;
+-o-transition: opacity 0.5s;
+-webkit-transition: opacity 0.5s;
+}
+.dListDeal {
+    padding-left:3px!important;
+}
+#maindetail {
+    float:left;    
+    width:71%;
+    
+    padding:10px;
+}
+#BuyandRelates {
+    float:left;
+    margin-left:2%!important;
+    height:auto;
+    width:24.5%;
+}
+#inforProduct {
+    -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+    padding:10px;
+    height:auto;
+}
+.TitleProductRelates {
+background-repeat:repeat;background-image:url("images/bg_test.png") ;
+box-shadow:0px 1px 4px rgba(0,0,0,0.5);-moz-box-shadow:0px 1px 4px rgba(0,0,0,0.5);-webkit-box-shadow:0px 1px 4px rgba(0,0,0,0.5);
+-moz-box-shadow:0px 1px 4px rgba(0,0,0,0.5);-ms-box-shadow:0px 1px 4px rgba(0,0,0,0.5); width: 110%; margin-left:-5%;  height:35px;
+text-align:center; color:white; font-size:16px; line-height:35px; font-weight:bold;
+}
+.inforProduct a{
+    color:black;
+}
+.RelatesProductsdc {
+    box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);  
+    height:285px;  
+}
+
+.pagenumber .link-buttons
+{   
+text-align:center;
+margin-left:5px!important;
+margin-top:5px!important;
+line-height:25px!important;
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+width:50px!important;
+height:50px!important;
+}
+div.Collectionpage
+{    
+    float:right;
+    margin-right:10px;
+    margin-top:-10px;
+    overflow-x:scroll;
+    width:205px;
+    height:50px;
+ 
+
+}
+div.item_colection 
+{
+    width:30px;
+    height:30px;
+    float:left;
+    margin-left:10px;
+    text-align:center;
+    line-height:30px;
+         background-color:orange;
+         color:white;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+   }
+
+div.item_colections 
+{
+    width:30px;
+    height:30px;
+    float:left;
+    margin-left:10px;
+    text-align:center;
+    line-height:30px;
+         background-color:black;
+         color:white;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+   }
+    div.item_colection:hover
+    {       
+         color:red;
+         cursor:pointer;
+    }
+.pagesrcoll {
+
+    
+    width:1000px;
+
+}
+
+div.Collectionpage::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+div.Collectionpage::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+div.Collectionpage::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+div.Collectionpage::-webkit-scrollbar {
+    height:6px!important;
+}
+a.info {
+width:100%;
+}
+.itemmenu:before {
+    content:url(http://icons.iconarchive.com/icons/icons-land/vista-people/24/Occupations-Film-Maker-Male-Light-icon.png);
+    list-style:content;
+}
+.dropdown {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+  width: 320px;
+  margin-top:3px;
+  margin-left:5px;
+
+}
+
+
+
+
+.titleCart {
+-webkit-box-shadow: 0 7px 4px #777;
+	-moz-box-shadow: 0 7px 4px #777;
+	box-shadow: 0 7px 4px #777;
+
+    width:100%;
+    height:40px;
+    float:left;
+    
+    text-align:center;
+    color:white;
+    font-size:19px;
+    font-weight:bold;
+    line-height:40px;
+    background-image:url(images/bg_test.PNG);
+    
+}
+#items1 {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    float: left;
+    width: 30%;
+    height: 467px;
+    background-color: white;
+    margin-left:1.5%;
+}
+#items2 {
+    float: left;
+    width: 68.5%;
+    height: 467px;
+    position:relative;
+    overflow:scroll;
+    overflow-x:hidden;
+    padding-top:2px;
+}
+.input {
+width:86%;
+	display:block;
+	height:26px;
+	padding:4px 12px;
+	border:1px solid #d0d0d0;
+	border-radius:4px;
+	box-shadow:inset 0px 1px 3px 0 rgba(0,0,0,0.2),1px 2px 3px 0 rgba(0,0,0,0.1);
+	font-family:Arial,Tahoma,Verdana;
+	color:#565656;
+	font-size:12px;
+	transition:box-shadow 0.3s;
+	-moz-transition:box-shadow 0.3s;
+	-webkit-transition:box-shadow 0.3s;
+	-o-transition:box-shadow 0.3s
+}
+    .input:focus {
+        border:1px solid #7bafdd;
+	box-shadow:inset 0px 1px 3px 0 rgba(0,0,0,0.2),0 0 3px 1px rgba(123,175,221,0.8)
+    }
+
+.inputtextarea {
+    width:86%;
+	display:block;
+	height:86px;
+	padding:4px 12px;
+	border:1px solid #d0d0d0;
+	border-radius:4px;
+	box-shadow:inset 0px 1px 3px 0 rgba(0,0,0,0.2),1px 2px 3px 0 rgba(0,0,0,0.1);
+	font-family:Arial,Tahoma,Verdana;
+	color:#565656;
+	font-size:12px;
+	transition:box-shadow 0.3s;
+	-moz-transition:box-shadow 0.3s;
+	-webkit-transition:box-shadow 0.3s;
+	-o-transition:box-shadow 0.3s
+}
+    .input:focus {
+        border:1px solid #7bafdd;
+	box-shadow:inset 0px 1px 3px 0 rgba(0,0,0,0.2),0 0 3px 1px rgba(123,175,221,0.8)
+}
+
+.inforcustomer {
+float:left;padding-left:5px; font-weight:bold; font-size:12px; line-height:29px; width:26%; color:#00CCCC;
+}
+.textinfor {
+    float:left; width:70%
+}
+
+.inputSubmit{
+	-moz-box-shadow:inset 0px 1px 0px 0px ;
+	-webkit-box-shadow:inset 0px 1px 0px 0px ;
+	box-shadow:inset 0px 0px 0px 0px ;
+	background:-webkit-gradient( linear,left top,left  );
+	background:-moz-linear-gradient( center top );
+	
+	background-image: url("images/bg_test.png");
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid white;
+	display:inline-block;
+	color:#fff;
+	font-family:arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:7px 12px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #1b7297;
+    width:120px;
+    font-size:16px;
+    height:40px;
+}
+.inputSubmit:hover{
+	color:#fff;
+	color:rgba(255,255,255,0.8);
+	text-decoration:none;
+	background:-webkit-gradient( linear,left top,left bottom,color-stop(0.05,#1683b1),color-stop(1,#4aaed9) );
+	background:-moz-linear-gradient( center top,#1683b1 5%,#4aaed9 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1683b1',endColorstr='#4aaed9');
+	background-color:#1683b1
+}
+.inputSubmit:active{
+	position:relative;
+	top:1px;
+	color:#fff
+}
+.dropdownNumber {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 20px;
+  width: 80px;
+  margin-top:3px;
+  margin-left:5px;
+  background: #f2f2f2;
+  border: 1px solid;
+  border-color: white #f7f7f7 #f5f5f5;
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+.inputSubmit:hover img{opacity:0.8}
+.imagesProductCart { float:left;	box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3); width:80px; height:80px; margin-left:5px;
+}
+
+.infroProductCart { float:left; margin-left:15px; width:550px; height:80px;
+
+                    	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.nameInfroProductCart { float:left; width:150px; height:80px; 
+}
+    .nameInfroProductCart h4 { font-weight:bold; padding-top:26px; text-align:center; padding-left:10px;
+    }
+.priceInfroProductCart { float:left; margin-left:15px; padding-top:25px; font-weight:bold; font-size:17px; color:red; width:80px; height:80px;
+}
+.numberInfroProductCart { float:left; margin-left:20px;width:50px; height:80px; padding-top:31px;
+}
+.imagedelete {
+    margin-left:40px;width:20px; height:80px;float:left; margin-top:30px;
+}
+
+.dropdown-select1:focus {
+  z-index: 3;
+  width: 50px;
+  color: #394349;
+  outline: 2px solid #49aff2;
+  outline: 2px solid -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.dropdown-select1 > option {
+  margin: 3px;
+  padding: 6px 8px;
+  text-shadow: none;
+  background: #f2f2f2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+.dropdown-select1 {
+  
+  width: 50px!important;
+  margin-top:-5px;
+  padding: 0px 8px 6px 20px;
+  height: 38px;
+  line-height: 15px;
+  font-size: 12px;
+  color: red;
+  text-shadow: 0 1px white;
+  /* Fallback for IE 8 */
+ background:#f0f0f0;
+  /* "transparent" doesn't work with Opera */
+  text-align:right!important;
+  background-image:url(images/drop.png);
+  background-repeat:no-repeat;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+#items2::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+#items2::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+#items2::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+#items2::-webkit-scrollbar {
+    height:6px!important;
+}
+#footer {
+width:100%;
+height:250px; 
+background-image:url(images/bg_test.PNG);
+}
+#footerItem1 {width:50%;
+              height:100%;
+             float:left;
+             
+}
+
+#footerItem2 {width:50%;
+              height:100%;
+              float:left;
+              padding-top:20px;
+}
+.clearfix{
+    display:none!important;
+}
+
+     #countProductCart, #totalAmountHeader
+{
+overflow: hidden;
+}
+#totalAmountHeader
+{
+
+height:20px;overflow: hidden;
+}
+#totalAmountHeader center 
+{overflow: hidden;
+display:none!important;
+width:0px!important; height:0px!important;
+}
+#totalAmountHeader center 
+{overflow: hidden;
+display:none!important;
+width:0px!important; height:0px!important;
+}
+
+#intoMoneyCart center a
+{overflow: hidden;
+display:none!important;
+width:0px!important; height:0px!important;
+}
+#intoMoneyCart center
+{overflow: hidden;
+display:none!important;
+width:0px!important; height:0px!important;
+}
+.amo-cart a span sup
+{display:none!important;}
+sup
+{
+display:none!important;
+}
+.notice{
+	border:1px solid #d9d9d9;
+	box-shadow:inset 0 0 0px 1px #FFF;
+	-moz-box-shadow:inset 0 0 0px 1px #FFF;
+	-webkit-box-shadow:inset 0 0 0px 1px #FFF;
+	height:45px;
+	border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	margin-bottom:25px;
+	padding-left:20px;
+	cursor:pointer
+}
+.notice span{
+	color:#515151;
+	font-size:14px;
+	text-shadow:1px 1px rgba(255,255,255,0.5);
+	line-height:45px;padding
+}
+.notice.warning span{color:#4a3505}
+.notice.warning{
+	border-color:#eac572;
+	background:rgb(255,244,214);
+	background:-moz-linear-gradient(top, rgba(255,244,214,1) 1%,rgba(244,226,184,1) 71%);
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(1%,rgba(255,244,214,1)),color-stop(71%,rgba(244,226,184,1)));
+	background:-webkit-linear-gradient(top, rgba(255,244,214,1) 1%,rgba(244,226,184,1) 71%);
+	background:-o-linear-gradient(top, rgba(255,244,214,1) 1%,rgba(244,226,184,1) 71%);
+	background:-ms-linear-gradient(top, rgba(255,244,214,1) 1%,rgba(244,226,184,1) 71%);
+	background:linear-gradient(top, rgba(255,244,214,1) 1%,rgba(244,226,184,1) 71%);
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff4d6',endColorstr='#f4e2b8',GradientType=0 )
+}
+.notice.success span{color:#617718 ; width:auto!important; text-align:center;}
+.notice.success{
+	border-color:#b2c866;
+	background:rgb(240,250,204);
+	background:-moz-linear-gradient(top, rgba(240,250,204,1) 0%,rgba(223,242,153,1) 71%);
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(240,250,204,1)),color-stop(71%,rgba(223,242,153,1)));
+	background:-webkit-linear-gradient(top, rgba(240,250,204,1) 0%,rgba(223,242,153,1) 71%);
+	background:-o-linear-gradient(top, rgba(240,250,204,1) 0%,rgba(223,242,153,1) 71%);
+	background:-ms-linear-gradient(top, rgba(240,250,204,1) 0%,rgba(223,242,153,1) 71%);
+    text-align:center;
+	background:linear-gradient(top, rgba(240,250,204,1) 0%,rgba(223,242,153,1) 71%);
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0facc',endColorstr='#dff299',GradientType=0 )  
+}
+.list-deal-o1
+{
+    position:relative;width:430px ;height:180px;float:left; margin-left:5px; margin-bottom:20px;
+ background-color:white;
+ -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.offer-detail1 {
+    float:left;
+    width:250px ;
+    height:180px;
+    z-index:999;
+}
+.imagessProduct {
+     -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+}
+.aImgDeal1 {
+    float:left;
+    width:180px;
+    height:180px;   
+}
+.gr-deal-fix{margin-left:0}.deliver-icon1 p{float:left;font-size:11px;font-style:italic;  display:block}
+.countBuy1{
+    margin-left:15px;
+    background-position:left; color:white; width:82px; bottom:0px!important; margin-bottom:0px;
+           background: none repeat scroll 0 0 rgba(0, 149, 218, 0.7); 
+           display:block;float:left;height:26px;line-height:26px;margin-bottom:0;padding-top:7px;font-style:italic;}
+.countBuy1 b{font-style:normal;font-size:12px}
+.countBuy1{padding-left:17px !important;background-repeat:no-repeat;}
+
+.countBuy1{padding-top:3px !important;}
+
+.deliver-icon1{color:#FFFFFF;opacity:1;position:absolute;z-index:3;}
+.bg_title1 {
+margin-left:5px;
+margin-top:30px;
+height:auto;
+margin-bottom:10px;
+
+text-align:center;
+}
+.bg_title1 a h1
+{    
+    width:98%;
+    font-weight:bold;
+}
+.p_info1, p_info {
+    margin-left:-10px;
+}
+
+.styled-select {
+
+   position:absolute;   
+   margin:-53px auto auto 600px;        
+   width: 45px;
+   padding: 5px;
+   font-size: 14px;
+   line-height: 1;
+   border: 0;
+   border-radius: 3px;
+   height: 27px;
+ 
+   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     background-repeat:no-repeat;
+   }
+.styled-selects {
+   margin:12px -60px 0px 0px;
+   float:right;
+   width: 55px;
+   padding: 5px;
+   font-size: 11px;
+   line-height: 1;
+   border: 0;
+   border-radius: 3px;
+   height: 25px;
+ 
+   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     background-repeat:no-repeat;
+   }
+.styled-selectsex {
+   margin:3px 0px 0px 7px;
+   float:left;
+   width:75px;
+   padding: 5px;
+   font-size: 11px;
+   line-height: 1;
+   border: 0;
+   border-radius: 3px;
+   height: 25px;
+ 
+   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     background-repeat:no-repeat;
+   }
+
+.styled-selectsexgia {
+   margin:3px 0px 0px 7px;
+   float:left;
+   width:50px;
+   padding: 5px;
+   font-size: 11px;
+   line-height: 1;
+   border: 0;
+   border-radius: 3px;
+   height: 25px;
+ 
+   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     background-repeat:no-repeat;
+   }
+
+.styled-selectsexs {
+   margin:3px 0px 0px 0px;
+   float:left;
+   width: 74px;
+   padding: 5px;
+   font-size: 11px;
+   line-height: 1;
+   border: 0;
+   border-radius: 3px;
+   height: 25px; 
+   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     background-repeat:no-repeat;
+   }
+
+
+.nameSubCat .itemChild ul li::before {
+    content:url("Images/li2icon.png");
+    list-style: content;
+    margin-right:2px;
+    margin-left:2px;
+    margin-top:8px;
+   
+}
+.nameSubCat .itemChild{
+ position:absolute;
+ display:none;
+ margin-left:135px;
+ background-color:white;
+ margin-top:-25px;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    border-radius:4px;
+}
+
+.nameSubCat:hover .itemChild{
+ display:block;
+}
+.listSubCats li:hover {
+   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.listSubCats li:hover a {
+    text-decoration:none;
+
+}
+
+#footerDC {
+ float:left;margin-left:25%;margin-top:20px; width:440px; height:100%;
+}
+
+
+   

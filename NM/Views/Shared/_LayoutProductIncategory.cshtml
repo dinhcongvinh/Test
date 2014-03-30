@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="ctl00_headerTag">
+    <title>
+	--- HayFashion.vn ---
+</title>
+
+<meta content="NOODP,index,follow" name="robots"/>
+<link rel="shortcut icon" title="SELFHTML Icon" type="image/x-icon" />    
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta id="ctl00_Head_Content_headDesc" name="description" content="hayFashion chuyên cung cấp các sản phẩm thời trang nam, thời trang nữ, thời trang trẻ em thương hiệu Carter's từ Mỹ. Đảm bảo chất lượng và giá cả trên từng sản phẩm!"/>
+    <meta id="ctl00_Head_Content_headKw" name="keywords" content="hayFashion chuyên cung cấp các sản phẩm thời trang nam, thời trang nữ, thời trang trẻ em thương hiệu Carter's từ Mỹ. Đảm bảo chất lượng và giá cả trên từng sản phẩm!, thoi trang nam, thoi trang nu, thoi trang tre em, carter, carter's"/>
+        
+	<style type="text/css">
+     .mainMenu:hover .contentMenu{display:none !important;}
+     .mainMenu:hover .contentMenu.focusIndex{display:block !important}
+    </style>
+
+<link type="text/css" rel="stylesheet" href="~/Frondend_files/reset.css"/>
+<link type="text/css" rel="stylesheet" href="~/Frondend_files/style.css"/>
+<link type="text/css" rel="stylesheet" href="~/Frondend_files/customScrollbar.css"/>
+<link type="text/css" rel="stylesheet" href="~/Frondend_files/main.css"/>        
+    <script type="text/javascript" src="~/Frondend_files/FixIE.js"></script>   
+    <div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</head>
+<body id="ctl00_dBody" style="zoom: 1;">
+
+    
+    <div style="display:block" class="wrapper">
+
+         <div style="position:absolute; margin-left:2%; float:right; margin-top:15%;">
+       
+                       @Html.Action("ShowFacebook","Home")
+         </div>
+			
+
+            <section class="tabs-header" id="tabs-headerDC">
+                <div class="mod-innerHeader">
+                    <div class="gr-tabs">
+                        <p>
+                            <a href="/Home/Index">Trang chủ</a>
+                            <span>|</span>
+							<a href="/Home/Qui_trinh_mua_hang">Qui trình mua hàng</a>    
+                            <span>|</span>
+                            <a href="/Home/Dieu_le_mua_hang">Điều lệ mua hàng</a>  
+                            <span>|</span>                              
+                            <a href="/Home/Lien_he_voi_chung_toi">Liên hệ</a>                      
+                        </p>
+                    </div>
+                   
+                 @Html.Action("ShowLogoYahooOnline","Home")
+                </div>
+            </section>
+            <section class="sectionBody">
+                
+                @Html.Action("ShowSeachCart","Home")
+                @Html.Action("ShowMenuSlider","Home")	
+    <section class="sectionSubMenu">
+        <div id="ctl00_Body_Main_dMenuView" class="sub-menu sub-menuNew">
+		<nav>    
+			<ul class="sub-nav-inner">  
+                   
+			<li><a href="/Home/Index" name="1" class="dealToday active"><i></i><p class="itemdc1">Sản phẩm mới</p></a></li> 
+                <li><a href="/Home/Hang_hieu" name="1" class="dealToday active""><i></i><p class="itemdc2">Hàng nhập khẩu từ Mỹ</p></a></li>      
+                <li><a href="/Home/Xuat_Khau" name="1" class="dealToday active"><i></i><p class="itemdc3">Hàng xuất khẩu</p></a></li>      
+					   
+				</ul>
+		</nav>			
+				
+			<div class="viewType">    
+				<p style="color:#ffffff;float:left;font-size:12px;font-weight:bold;margin:13px 8px 0 0">Xem: </p>    
+				<p class="viewby">        <a href="/Home/ChangeShowView"><i class="bygrid"></i></a>       
+				<a href="/Home/ChangeShowViews"><i class="bylist" style="background-image:none;"></i></a>    </p>
+			</div>
+		</div>
+    </section>
+    <section class="sectionListDeal">
+        <div class="mod-inner-list">
+            <div class="dListDeal">                
+          @RenderBody()
+            </div>
+        </div>
+    </section>
+    
+</section>
+        </div>
+<div id="footer">
+            <div id="footerItem1">
+                          
+                <div id="footerDC">
+                    <h4 style="color:white; font-weight:bold; border-bottom:1px solid white; font-family:Tahoma; line-height:30px; text-align:left">THÔNG TIN WEBSITE</h4>
+                    <br />
+                    <a href="/Home/Index"><h4 style="color:orange; font-weight:bold; text-align:left; height:25px">Trang chủ</h4></a>                    
+                    <a href="/Home/Qui_trinh_mua_hang"><h4 style="color:orange; font-weight:bold; text-align:left;height:25px">Qui trình mua hàng</h4></a>  
+                    <a href="/Home/Dieu_le_mua_hang"><h4 style="color:orange; font-weight:bold; text-align:left;height:25px">Điều lệ mua hàng</h4></a>                   
+                    <a href="/Home/Lien_he_voi_chung_toi"><h4 style="color:orange; font-weight:bold; text-align:left;height:25px">Liên hệ</h4></a>
+
+                     <h4 style="color:white; font-weight:bold; border-bottom:1px solid white; font-family:Tahoma; line-height:30px; text-align:left">THÔNG TIN LIÊN HỆ</h4>
+                    <br />
+                    <span style="color:white">
+                    @Html.Action("ShowAddress","Home")  
+                    </span>
+                </div>
+                
+                
+            </div>
+
+             <div id="footerItem2">  
+                  <div style="color:white;font-size:17px; font-weight:bold; font-family:Tahoma; width:100%; margin-top:10px; text-align:center">
+                     MẠNG MUA SẮM HAYFASHION.VN <br /> 
+                    <i style="font-size:12px;">( Chất lượng trên từng sản phẩm! )</i>
+                    <br />
+                    <img style="float:right; margin-right:120px; margin-top:10px;z-index:999;" src="~/Frondend_files/images/icon_mobile.png" />
+                    <br />
+                     <img style="float:right; margin-right:50px;z-index:999;margin-top:25px" src="~/Frondend_files/images/browsers.png" />
+                </div>
+            </div>    
+ </div>
+    
+
+<script type="text/javascript">
+    //<![CDATA[
+
+   
+    
+    function ShowCategory()
+    {
+        document.getElementById('listCatSearchs').style.display = "block";
+
+    }
+
+  
+    
+   
+</script>
+
+
+
+    <script type="text/javascript" src="~/Frondend_files/all_common.js"></script>
+	<script type="text/javascript" src="~/Frondend_files/jquery.ui.js"></script>
+	<script type="text/javascript" src="~/Frondend_files/all_index.js"></script>
+
+</body>
+   
+<script type="text/javascript"> 
+<!--//--><![CDATA[//><!-- 
+    jQuery.extend(Drupal.settings, { "basePath": "/", "boost": { "nid": "23", "q": "NULL", "title": "NULL" } });
+    //--><!]]> 
+</script>
+ 
+
+</html>

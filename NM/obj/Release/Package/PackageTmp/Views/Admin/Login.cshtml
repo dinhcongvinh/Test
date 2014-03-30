@@ -1,0 +1,56 @@
+﻿@{
+    Layout = null;
+    }
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">  
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <title>VINHBUY Admin - Đăng nhập</title>   
+    <link rel="stylesheet" href="../../backend/layout/1140.css" type="text/css" media="screen" />   
+    <link rel="stylesheet" href="../../backend/layout/styles.css" type="text/css" media="screen" /> 
+    <link rel="stylesheet" href="../../backend/layout/default.css" type="text/css" media="screen" />   
+    <script type="text/javascript" src="../../backend/layout/css3-mediaqueries.js"></script>
+   
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../../backend/layout/jquery.uniform.min.js"></script> 
+    <link rel="stylesheet" href="../../backend/layout/uniform.default.css" type="text/css" media="screen" />   
+    <script type="text/javascript" src="../../backend/layout/custom.js"></script>
+
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+
+            $('#name').focus(function () {
+                $(this).val('');
+            });
+            $('#pass').focus(function () {
+                $(this).val('');
+            });
+        });
+    </script>
+</head>  
+<body class="texture">   
+	<div class="container"><div class="row">
+	    <div style="color:#F90; text-shadow:1px 1px 3px #F10; margin-top:125px; font-size:24px; text-align:center; font-weight:700;">HỆ THỐNG QUẢN LÝ WEBSITE SỐ 1 VIỆT NAM</div>
+        <div class="panel-wrapper panel-login">
+            <div class="panel">
+                <div class="title"> 
+                    <h4>Đăng nhập</h4> 
+                    
+                </div>  
+                <div class="content"><!-- ## Panel Content  -->  
+                    <form method="post" action="/Admin/Login" > 
+                        <div><input type="text" id="name" name="userName" value="Tên đăng nhập" /></div>  
+                        <div><input type="password" id="pass" name="passwrok" value="Nhập mật khẩu" /></div>
+                        <div><center><input type="submit" class="button-blue" value="Đăng nhập" /></center> </div> 
+                    </form>  <!-- ## / Panel Content  --> 
+                </div> 
+            </div>  
+            <div class="shadow"></div>
+        </div>  
+    	
+	</div></div>    
+</body>
+</html> 

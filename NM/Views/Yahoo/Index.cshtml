@@ -1,0 +1,62 @@
+﻿@model IEnumerable<NM.Yahoo>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<div id="textload" style="display:none" >vinh</div>
+<div class="content spacing"><a href="/Yahoo/AddYahoo"  class="button-blue">Thêm mới Yahoo</a></div>
+        
+         <div id="divthemloaihang" class="panel-wrapper" style="margin-top:25px;"> 
+        
+		</div>
+        	<div class="shadow"></div> 
+        
+        <div  class="panel-wrapper" style="margin-top:25px;"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>Danh sách tài khoản Yahoo hỗ trợ trực tuyến</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<table id="sample-table-sortable" class="sortable resizable">
+                	<thead><tr>
+                    	<th>STT</th>
+                        <th>Tài khoản Yahoo  </th>                       
+                        <th>Vị trí hỗ trợ</th>
+                        <th>Số điện thoại</th>
+                        <th>Chỉnh sửa</th>
+                        <th>Xóa</th>
+					</tr></thead> 
+                    <tbody>
+                    @{
+                        int i = 1;
+                        foreach (var item in Model)
+                        {
+                             <tr id="@item.NickYahoo">
+                                  <td>@(i++)</td>
+                                <td>@item.NickYahoo </td>
+                    	       
+                                <td>@item.DescriptionYahoo</td>
+                                <td>@item.Phone</td>
+                                <td><a href="/Yahoo/EditYahoo?idYahoo=@item.IDYahoo" >Chỉnh sửa</a></td>
+                                <td> <a href="/Yahoo/DeleteYahoo?idYahoo=@item.IDYahoo">Xóa</a>
+                            </tr>                        
+                        }
+                    }
+                   
+                  </tbody>
+				</table>  
+			<!-- ## / Panel Content  --> </div> 
+		</div>
+        	<div class="shadow"></div> 
+        </div>
+
+                
+
+                <br /><br />
+		
+        <div class="notice warning" style="margin-top:25px;"><span><strong>Lưu ý:</strong> Người dùng có thể trao đổi với bạn qua tài khoản này bên ngoài trang chủ (Khuyến khích sử dụng 4 tài khoản)!</span> </div>
+                
+    
+

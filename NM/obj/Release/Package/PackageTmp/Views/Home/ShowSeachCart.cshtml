@@ -1,0 +1,111 @@
+﻿@model IEnumerable<NM.Category>
+@{
+    Layout = null;
+}
+<script>
+
+    function ChangeRatio()
+    {
+        var parameter = $('#currency').val();
+
+        var urlTatolAmountinCart = '/Cart/IntoMoneyInCartCurrency?id=' + parameter;
+        $('#totalAmountHeader').load(urlTatolAmountinCart);
+        
+        setTimeout('AssetUpdate()', 600);
+    }
+
+    function AssetUpdate() {
+
+        var update = document.getElementById('totalAmountHeader');
+        $('#intoMoneyCart').text(update.innerText);
+        
+    }
+</script>
+
+<section class="sectionEmail" style="position: absolute;">
+                    <header style="" class="header">
+                        <div class="container bg-header">
+
+                            <select id="currency" class="styled-selects" onchange="ChangeRatio()">
+                                <option value="1">VN</option>
+                                <option value="2">EUR</option>
+                                <option value="3">USD</option>
+                                <option value="4">AUD</option>
+                            </select>
+
+                            <div id="ctl00_dBasket" class="bg-cart">
+								<div class="amo-cart">  
+									<a href="/Cart/Index" class="cart">    
+										<span id="totalMoneyHeader">
+                                           
+                                           <b id="totalAmountHeader" style="color:#9900FF">@Session["sumMoney"]</b>&nbsp;
+                                                                                       
+										</span>  
+                                        
+                                             <i id="countProductCart">@Session["countProduct"]</i> 
+                                        
+										
+									</a>   
+									<span class="btn-thanhtoan">
+										<a style="margin:0" href="/Cart/Index"><i>Giỏ hàng</i>
+										</a>
+									</span>
+								</div>
+								<div id="dPopupCart_Alert" class="newSP-cart" style="display:none;">
+								</div>
+                                
+							</div>                            
+                            
+                            <div class="searchMain">
+                                <form method="post" action="/Home/SeachProduct">
+                                    <span class="icon_clear_text" style="display: none;"></span>
+                                    <div class="selectCategory">
+                                         <div class="dropdown">
+                                          <select name="listCategory" id="ListCategory" class="styled-selectsexs">
+                                        
+                                                @foreach (var item in Model)
+                                                {
+                                                    <option value="@item.IDCategory">@item.NamesCategory</option>
+                                                }
+                                              </select>                                       
+
+                                            <select name="sex" class="styled-selectsex">
+                                                <option value="-1">Giới tính --</option>
+                                                <option value="1"> Nam</option>
+                                                <option value="2">Nữ</option>
+                                            </select>                                         
+                                         
+                                             <select name="material" id="material" class="styled-selectsex">
+                                                <option value="-1">Chất liệu --</option>
+                                                 @foreach (var item in (IEnumerable<NM.Material>)ViewBag.Material)
+                                                    {
+                                                        <option value="@item.IDMaterial">@item.NamMaterial</option>
+                                                    }
+                                              </select> 
+                                             
+                                             <select name="cost" class="styled-selectsexgia">
+                                                <option value="-1">Giá --</option>
+                                                <option value="1">< 100k</option>
+                                                <option value="2">100 - 200k</option>
+                                                <option value="3">200 - 300k</option>
+                                                <option value="4">300 - 450k</option>
+                                                <option value="5">> 450k</option>
+                                            </select> 
+                                          </div>                                       
+                                    </div>
+
+                                    <div class="keySearchMain">
+                                        <input name="nameProduct" type="text" id="ctl00_txtGlSearch" class="txtGlSearch" placeholder="Tên sản phẩm">
+                                    </div>
+                                    
+                                        <input type="submit" value="*" style=" color:white; background:url(/Frondend_files/images/btsearch.png) 7px 1px!important ; background-repeat:no-repeat!important; font-weight:bold; height:34px!important; margin-top:2px; text-align:center!important; line-height:60px!important; margin-right:2px!important;" class="btnSearchMain" />
+                                          
+                                </form>
+                            </div>
+                            <img id="iconForcus" style="margin-right:0px!important; display:none; float:right; z-index:999; margin-right:0px;" src="~/Frondend_files/images/arrow-right-icon.png" />
+
+                            
+                        </div>
+                    </header>
+                </section>
+                

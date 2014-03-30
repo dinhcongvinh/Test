@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutCart.cshtml";
+}
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+    var _idProduct = 0;
+    function DeleteProduct(idproduct)
+    {
+        $('#' + idproduct).hide();
+        var url = '/Cart/DeleteProduct?idproduct=' + idproduct;        
+        $('#intoMoneyCart').load(url);
+        setTimeout('LoadInfor()', 350);
+    }
+    function LoadInfor() {
+
+        var urlcountProductCart = '/Cart/CountItemInCart';
+        var urlTatolAmountinCart = '/Cart/IntoMoneyInCart';
+
+        $('#totalAmountHeader').load(urlTatolAmountinCart);
+        $('#countProductCart').load(urlcountProductCart);
+    }
+
+    function EditProduct(idproduct)
+    {
+        var result = $('#select_' + idproduct).val();
+        var url = '/Cart/EditProduct?idProduct=' + idproduct + '&numberProduct=' + result;
+        _idProduct = idproduct;
+        $('#testCartIntoMoney').load(url);
+        setTimeout('Loadsa()', 350);
+        
+        
+    }
+    function Loadsa(idproduct)
+    {
+        var getText = $('#testCartIntoMoney').text();
+       
+        $('#intro_' + _idProduct).val(getText);
+
+        LoadInfor();
+
+        var urlTatolAmountinCart = '/Cart/IntoMoneyInCart';
+
+        $('#intoMoneyCart').load(urlTatolAmountinCart);
+       
+    }
+</script>
+<div id="testCartIntoMoney" style="display:none;">vinh</div>
+<div id="items2" >
+   @try
+   {
+    foreach (var item in (List<NM.Models.ItemCarts>)Session["listCart"])
+    {
+        <div id="@item.idProduct">
+
+            <div class="imagesProductCart"><img width="80" height="80" src="~/@item.imageProduct"/></div>
+
+            <div class="infroProductCart"> 
+                <div class="nameInfroProductCart"> <h4>@item.namProduct</h4></div>
+                <div class="priceInfroProductCart"><input class="input" id="price_@item.idProduct" readonly value="@int.Parse(item.priceProduct.ToString()).ToString("0,0")" /></div>
+                <div style="float:left; margin-top:35px; margin-left:18px;"><b>X</b></div>
+                <div class="numberInfroProductCart"> 
+                    <select id="select_@item.idProduct" onchange="EditProduct(@item.idProduct)" class="dropdown-select1">
+                        <option selected="selected"  value="@item.numberProduct">@item.numberProduct</option>
+                        @for (int i = 1; i <= 20; i++)
+                        {
+                            if (!i.Equals(@item.numberProduct))
+                            {
+                                    <option value="@i">@i</option>
+                            }
+
+                        }
+                    </select>
+
+                </div>
+
+                 <div class="priceInfroProductCart"><input class="input" id="intro_@item.idProduct" readonly value="@int.Parse(item.intoMoney.ToString()).ToString("0,0")" /></div>
+                <div class="imagedelete" onclick="DeleteProduct(@item.idProduct)"><img src="~/Frondend_files/images/delete.png" /></div>
+            </div>
+
+        </div>
+        <div style="clear:both"></div>
+        <br />
+    }
+   }
+   catch { }
+</div>
+
+
+<div id="items1">
+     <form action="/Cart/Purchase" method="post">
+
+        <div class="titleCart"> Thông tin đơn hàng </div>
+
+             <br /><br /><br />
+            <div class="inforcustomer"> Khách hàng: </div> 
+            <div class="textinfor"> <input class="input" name="Custommer" type="text" required/> </div>
+        
+            <br /><br /><br />
+             <div class="inforcustomer"> Điện thoại: </div> 
+            <div class="textinfor"> <input class="input" name="Phone" type="text" required /> </div>
+
+          <br /><br /><br />
+             <div class="inforcustomer"> Email: </div> 
+            <div class="textinfor"> <input class="input" name="Email" type="email" required /> </div>
+        
+            <br /><br /><br />
+             <div class="inforcustomer"> Địa chỉ: </div> 
+            <div class="textinfor"> <input class="input" name="Address" type="text" required/> </div>
+
+            <br /><br /><br />
+             <div class="inforcustomer"> Ngày giao: </div> 
+            <div class="textinfor"> <input class="input" name="Date" type="Date" required/> </div>
+    
+            <br /><br /><br />
+             <div class="inforcustomer"> Ghi chú: </div> 
+            <div class="textinfor"> <textarea class="inputtextarea" name="Note"></textarea> </div>
+
+            <br /><br /><br /><br /><br /><br /><br />
+        
+            <div style="margin:auto; width:120px;"> <input type="submit" class="inputSubmit" value="Đặt hàng !" </div>
+            <br /> 
+            <div style="margin-left:0px;width:200px; margin-top:5px; color:red; font-weight:bold">  Tổng tiền:&nbsp;<b id="intoMoneyCart">@ViewData["intoMoney"] </b></div>
+         </form>     
+
+</div>
+
+
+  
+
+

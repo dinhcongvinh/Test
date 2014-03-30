@@ -1,0 +1,151 @@
+﻿@model NM.Product
+@{
+    ViewBag.Title = "EditProduct";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<script>
+    function InsertImages()
+    {
+        var imageName = $('#imagessleted').val();
+        $('#imagesSelectedtext').val('/Images/' + imageName);
+        $('#imagesselcob').html('<img src="' + '/Images/' + imageName + '" width="90" height="90" >');
+    }
+
+</script>
+
+<div class="panel-wrapper"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>CHỈNH SỬA SẢN PHẨM</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form id="formthemsanpham" method="post" action="/Product/EditProductHandle" enctype="multipart/form-data" >
+                    <input type="hidden" name="idProduct" value="@Model.IDProduct" /> 
+                	    	<div class="group fixed"> <label>Tên Sản Phẩm</label> <input type="text" name="namesProduct" value="@Model.NamesProduct"  maxlength="50" required /> </div>
+                    <div class="group fixed"> <label>Alias Sản Phẩm</label> <input type="text" name="aliasProduct" value="@Model.AliasProduct"  maxlength="50" required /> </div>
+                    <div class="group fixed"> <label>Danh mục</label> <select name="Category" >
+                             @foreach (var item in (IEnumerable<NM.Category>)ViewData["Category"])
+                             {
+                                 if (item.IDCategory == int.Parse(Model.IDCategory.ToString()))
+                                 {
+                                     <option selected="selected" value="@item.IDCategory"> @item.NamesCategory</option>
+                                 }
+                                 else 
+                                 {
+                                      <option value="@item.IDCategory"> @item.NamesCategory</option>
+                                 }
+                             }
+                            
+                          </select></div>                    
+                    <div class="group fixed"> <label>Giá gốc</label> <input type="number" name="giagoc" class="required number" value="@Model.CostProduct" required /> </div>
+                    <div class="group fixed"> <label>Giá bán</label> <input type="number" name="giaban" class="required number" value="@Model.PriceProduct" required /> </div>
+                    
+                     <div class="group fixed"> <label>Giới tính</label> 
+                            <select name="sex">
+                                 @if (Model.Sex == 1)
+                                 { 
+                                     <option value="1" selected="selected"> Nữ </option> 
+                                 }
+                                 else
+                                 {
+                                     <option value="1" > Nữ </option>
+                                 }
+
+                                @if (Model.Sex == 2)
+                                 {
+                                     <option value="2" selected="selected"> Nam </option>
+                                 }
+                                else
+                                {
+                                    <option value="2" > Nam </option>
+                                }
+
+                            </select>
+                     </div>
+
+                    <div class="group fixed"> <label>Loại sản phẩm</label> 
+                            <select name="typeProduct">
+                                @if (Model.TypeProduct == 1)
+                                {
+                                     <option value="1" selected="selected"> Hàng nhập khẩu từ Mỹ </option>
+                                     <option value="2"> Hàng xuất khẩu </option>
+                                }
+                                else
+                                {
+                                     <option value="1" > Hàng nhập khẩu từ Mỹ </option>
+                                     <option value="2" selected="selected"> Hàng xuất khẩu </option>
+                                }
+                                
+
+                            </select>
+                     </div>
+
+                    <div class="group fixed"> <label>Chất liệu</label>                           
+                        <select name="material">
+                            @foreach (var item in (System.Collections.Generic.IEnumerable<NM.Material>)ViewData["Material"])
+                            {
+                                if (item.IDMaterial == Model.IDMaterial)
+                                { 
+                                     <option value="@item.IDMaterial" selected="selected"> @item.NamMaterial </option> 
+                                }
+                                else
+                                {
+                                     <option value="@item.IDMaterial" > @item.NamMaterial </option>
+                                }
+
+
+                            }                                 
+                            </select>
+
+                    </div>
+
+                    
+                    <div class="group fixed"> <label>Số người đã mua</label> <input type="number" name="countBuyProduct" value="@Model.CountBuyProduct" required /> </div>
+                    <div class="group fixed"><label>Ảnh sản phẩm</label>  <input type="file" name="imagesProduct"/>(235 x 235) </div>
+                    <br />
+                    <img src="../../@Model.ImagesLogoProduct" width="50" height="50" style="width:50px;height:70px" />
+                    <div class="group fixed"><label>Ảnh Banner sản phẩm</label>  <input type="file" name="imagesProductBanner" /> (750 x 460)</div>
+                    <br />
+                    <img src="../../@Model.ImagesDetailProduct" width="50" height="50" style="width:50px;height:70px" />
+
+                             
+                    <div class="group fixed"> <label>Chi tiết sản phẩm</label> 
+                         <select id="imagessleted"  onchange="InsertImages()">
+                        @foreach (var item in (List<string>)ViewData["listImages"])
+                        {
+                            <option value="@item">@item</option>
+                        }
+                    </select>
+                        <br />
+                        
+                    <input type="text"  name="countB" value="" style="width:300px; " id="imagesSelectedtext" />
+                    <div style="float:left; margin-top:-40px" id="imagesselcob"></div>
+                        <br /><br /><br />
+                         
+                        
+                        <textarea class="ckeditor required" id="editor1" rows="10" cols="5"  name="detailProduct">@Model.DetailProduct</textarea> </div>
+                    
+                    
+                    
+                    <div class="group fixed"> <label>Làm sản phẩm bán chạy</label> @if (Model.IsBanChay == true)
+                                                                                   { <input type="checkbox" name="isBanChay" checked="checked" />}
+                                                                                   else
+                                                                                   {<input type="checkbox" name="isBanChay" />} </div>
+                    <div class="group fixed"> <label>Làm sản phẩm hit</label>  @if (Model.IsHit == true)
+                                                                               {<input type="checkbox" name="isHit" checked="checked" />}
+                                                                               else
+                                                                               {<input type="checkbox" name="isHit"  />} </div>
+                    
+                    <div class="group fixed"> <label>Từ khóa Google</label><input type="text" name="Keywords" value="@Model.Keywords"  /> </div>
+                    <center> <input type="submit" class="button-blue" value="Hoàn tất"></center>
+                    
+				</form>
+			<!-- ## / Panel Content  --> </div> 
+		</div>
+        	<div class="shadow"></div> 
+        </div>
+        
+
+

@@ -1,0 +1,213 @@
+﻿@model List<NM.SelectProductHitResult>
+@{
+    Layout = null;
+}
+@{ int count = 0; 
+ <section class="sectionSlideDeal">        
+        <div class="dTopdeal">
+            <div id="ctl00_Body_Main_headerMenu" class="contentMenu focusIndex" style="top:0;">
+				<ul class="listMenu">
+                      
+                    @foreach (var item in (IEnumerable<NM.Category>) ViewData["ParentMenu"])
+                    {                                           
+					    <li class="liCategory" style="height:55px"> 
+						    <div class="dNameCat" style="height:55px">
+							    <a class="aBrandStore" href="#">  
+                                    <div class="gc-brandstore"><img style="margin-left:-10px; margin-top:9px;" src="~/@item.ImagesBackgound" /></div>
+								    <font  style="color:#0083bf">@item.NamesCategory</font>     
+								    <span>@item.DescriptionCategory</span>       
+							    </a> 
+                                @if(@item.IsNew==true)
+                                {   
+							    <i class="newRibbon"></i>  
+                                }  
+							    <span class="arrExpand"></span>    
+						    </div>
+						    <div class="subCategory">  
+							    <div class="innerSubCat" style=" border-left:1px solid black;" > 
+                                     
+								    <ul class="listSubCats">
+
+                                        @foreach (var item1 in (IEnumerable<NM.Category>)ViewData["ChildMenu"])
+                                        {
+                                            if(item1.IDParentCategory==item.IDCategory)
+                                            {
+                                                <li class="nameSubCat">   
+											       <a href="/Home/ProductInCategory/@item.AliasCategory/@item1.AliasCategory/@item1.IDCategory#ctl00_Body_Main_dMenuView">        
+											        <div class="arrow"></div>@item1.NamesCategory</a>
+
+                                                    <ul class="itemChild">
+                                                         @foreach (var item2 in (IEnumerable<NM.Category>)ViewData["ChildMenu1"])
+                                                            {
+                                                                if(item2.IDParentCategory1==item1.IDCategory)
+                                                                {
+                                                                    <li class="nameSubCat">   
+											                           <a href="/Home/ProductInCategory/@item.AliasCategory/@item2.AliasCategory/@item2.IDCategory#ctl00_Body_Main_dMenuView">        
+											                            <div class="arrow"></div>@item2.NamesCategory</a>
+                                                                                                                                              
+										                            </li>
+                                                                 }
+                                            
+                                                            }	
+
+
+                                                    </ul>
+										        </li>
+                                             }
+                                            
+                                        }										
+								   </ul> 
+							    </div>
+						    </div>
+					    </li>
+                    }
+                    <li id="liimages"><img style="width:80px; margin:auto; margin-bottom:1px!important;" src="~/Frondend_files/images/Girls-Blue-Dress-icon_2.png" /> </li>
+                                      
+				</ul>
+                    
+			
+		</div>
+				
+           
+                        @if (int.Parse(ViewData["Count"].ToString()) >0)
+                        {
+                             <div class="mod-innerTop">
+                                <div id="ctl00_Body_Main_dSlideTopDeal_Cont" style="display:block" class="dSlideTop3Deal_Cont">
+                                    <div id="ctl00_Body_Main_dTopDeal_Slider" class="dSlideTop3Deal" style="margin-left: -2268px;">
+
+                           
+                                        @foreach (var item in (IEnumerable<NM.Adventiser>)ViewData["Advetiser"])
+                                        {
+                                            count++;
+                                            <div class="gr-deal-focus" style="overflow: hidden;" id="dDealTopSlider_@item.IDAdventiser">    
+							                    <section class="deal-img spa-offer">        
+									                    <h1 style="background: none repeat scroll 0% 0% transparent;">  
+										                    <img width="756" height="467" alt="@item.NameAdventiser" src="~/@item.Images">           
+									                    </h1> 
+								   
+								                    <div class="info-dealFocus">        
+									                    <div class="amo-focus">    
+											                   <h1>@item.NameAdventiser</h1>           
+									                    </div>  
+								                    </div> 
+							                    </section>
+						                    </div>
+                            
+                                        }			
+
+                                        @foreach (var item12 in Model)
+                                        {
+                                            count++;
+                                            <div class="gr-deal-focus" style="overflow: hidden;" id="dDealTopSlider_@item12.IDProduct">    
+							                    <section class="deal-img spa-offer">        
+								                    <a title="@item12.NamesProduct" href="/Home/ProductDetail/@item12.AliasCategory/@item12.AliasProduct/@item12.IDProduct" class="aImgDeal">            
+									                    <h1 style="background: none repeat scroll 0% 0% transparent;">  
+										                    <img width="756" height="467" alt="@item12.NamesProduct" src="~/@item12.ImagesDetailProduct">           
+									                    </h1> 
+								                    </a>
+								                   @* <a class="deliver-icon">
+									                    <span class="deli-voucher"></span>
+									                    <p class="countBuy"><b>@item.CountBuyProduct</b> đã mua</p>
+								                    </a>*@
+								      
+								                    <div class="info-dealFocus">        
+									                    <div class="amo-focus">    
+										                   <a href="/Home/ProductDetail/@item12.AliasCategory/@item12.AliasProduct/@item12.IDProduct"><h1>@item12.NamesProduct</h1>   </a> 
+											                    <p class="price"><b>@int.Parse(item12.PriceProduct.ToString()).ToString("0,0")<sup><u>đ</u></sup></b> - <span><del>@int.Parse(item12.CostProduct.ToString()).ToString("0,0")</del><sup><u>đ</u></sup></span>
+											                    </p>           
+									                    </div>  
+								                    </div> 
+							                    </section>
+						                    </div>
+                            
+                                        }	
+                                        
+                                                    </div>
+                                <div id="ctl00_Body_Main_dButtonSlide_Cont" class="btn-Slide">
+						            <ul id="thumbs">
+                            
+                                        @for (int ik = 0 ;ik < count ; ik++)
+                                        {
+							            <li id="slidetop_@ik" class=""><p><a href="javascript:void(0);"></a></p></li>
+							
+                                         }
+							
+						            </ul>
+					            </div>
+                                <div class="btn_slide_left"></div>
+                                <div class="btn_slide_right"></div>
+                            </div>
+                            <div id="ctl00_Body_Main_dTop2Deal">
+				
+                        </div>
+                       </div>
+                                    
+                            
+                        }
+                        else if (((IEnumerable<NM.Adventiser>)ViewData["Advetiser"]).Count() ==1)
+                        {
+                              
+                            foreach (var item in (IEnumerable<NM.Adventiser>)ViewData["Advetiser"])
+                            {
+                               
+                                
+							        <img width="756" height="467" style="float:right;" alt="@item.NameAdventiser" src="~/@item.Images">           
+							<div style="clear:both"></div>		      
+                             
+                                            <br />
+                            
+                            }
+                           
+                           
+                        }
+                        else
+                        {
+                            <div class="mod-innerTop">
+                                <div id="ctl00_Body_Main_dSlideTopDeal_Cont" style="display:block" class="dSlideTop3Deal_Cont">
+                                    <div id="ctl00_Body_Main_dTopDeal_Slider" class="dSlideTop3Deal" style="margin-left: -2268px;">
+                            
+                                       
+                                        @foreach (var item in (IEnumerable<NM.Adventiser>)ViewData["Advetiser"])
+                                        {
+                                            count++;
+                                            <div class="gr-deal-focus" style="overflow: hidden;" id="dDealTopSlider_@item.IDAdventiser">    
+							                    <section class="deal-img spa-offer">        
+									                    <h1 style="background: none repeat scroll 0% 0% transparent;">  
+										                    <img width="756" height="467" alt="@item.NameAdventiser" src="~/@item.Images">           
+									                    </h1> 
+								   
+								                    <div class="info-dealFocus">        
+									                    <div class="amo-focus">    
+											                   <h1>@item.NameAdventiser</h1>           
+									                    </div>  
+								                    </div> 
+							                    </section>
+						                    </div>
+                            
+                                        }	
+                                             </div>
+                                <div id="ctl00_Body_Main_dButtonSlide_Cont" class="btn-Slide">
+						            <ul id="thumbs">
+                            
+                                        @for (int ik = 0 ;ik < count ; ik++)
+                                        {
+							            <li id="slidetop_@ik" class=""><p><a href="javascript:void(0);"></a></p></li>
+							
+                                         }
+							
+						            </ul>
+					            </div>
+                                <div class="btn_slide_left"></div>
+                                <div class="btn_slide_right"></div>
+                            </div>
+                            <div id="ctl00_Body_Main_dTop2Deal">
+				
+                        </div>
+                       </div>
+                            
+                        }				
+						
+					
+    </section>
+}
+	

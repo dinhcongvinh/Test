@@ -1,0 +1,29 @@
+﻿@model NM.Yahoo
+@{
+    ViewBag.Title = "EditYahoo";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+
+<div class="panel-wrapper"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>CHỈNH SỬA TAI KHOẢN HỖ TRỢ TRỰC TUYẾN YAHOO</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form id="formthemsanpham" method="post" action="/Yahoo/EditYahooHandle" enctype="multipart/form-data" >
+                    <input type="hidden" name="idYahoo" value="@Model.IDYahoo" /> 
+                	    	<div class="group fixed"> <label>Tài khoản Yahoo</label> <input type="text" name="nickYahoo" value="@Model.NickYahoo"  maxlength="50" required /> </div>
+                    <div class="group fixed"> <label>Vị trí hỗ trợ</label> <input type="text" name="descriptionYahoo" value="@Model.DescriptionYahoo"  maxlength="50" required /> </div>
+                     <div class="group fixed"> <label>Số điện thoại</label> <input type="text" name="Phone" value="@Model.Phone"  maxlength="50" required /> </div>
+
+                     <center> <input type="submit" class="button-blue" value="Hoàn tất"></center>
+                    
+				</form>
+			<!-- ## / Panel Content  --> </div> 
+		</div>
+        	<div class="shadow"></div> 
+        </div>
+        
+

@@ -1,0 +1,120 @@
+﻿@model NM.SelectDetailProductResult
+@{
+    
+    Layout = "~/Views/Shared/_LayoutDetail.cshtml";
+}
+
+@section meta {
+    <title> @Model.NamesProduct | Đảm bảo chất lượng trên từng sản phẩm</title>
+    <meta name="robots" content="NOODP,index,follow" />
+    <meta name="copyright" content="ClickMua" />
+    <meta name="author" content="ClickMua" />
+    <meta name="keywords" content="@Html.Raw(Model.Keywords)" />
+    <meta name="description" content="@Html.Raw(Model.Keywords)" />
+}
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+
+    function AddProductToCart(idProduct)
+    {
+        var url = '/Cart/AddProduct?idproduct=' + idProduct;        
+        $('#receverCart').load(url);
+        setTimeout('Asset()', 600);            
+    }
+    function Asset()
+    {
+        var urlcountProductCart = '/Cart/CountItemInCart';
+        var urlTatolAmountinCart = '/Cart/IntoMoneyInCart';
+
+        $('#totalAmountHeader').load(urlTatolAmountinCart);
+        $('#countProductCart').load(urlcountProductCart);
+
+        $('#iconForcus').show();
+       
+        setTimeout('Hideicon()', 1000);
+    }
+    function Hideicon()
+    {
+        $('#iconForcus').hide();
+    }
+
+    
+
+</script>
+
+<div id="receverCart" style="display:none"></div>
+<div id="maindetail">
+    @Html.Raw(Server.HtmlDecode(Model.DetailProduct))
+  </div>
+   <script type="text/javascript" src="~/Scripts/load.js"></script> 
+<script type="text/javascript"> 
+<!--//--><![CDATA[//><!-- 
+    jQuery.extend(Drupal.settings, { "basePath": "/", "boost": { "nid": "23", "q": "NULL", "title": "NULL" } });
+    //--><!]]> 
+</script>
+<!-- End show Detail Product now  -->
+
+<!-- show Relates Product of Product now   -->
+<div id="BuyandRelates" >
+    <div id="inforProduct">
+      <h1 style="font-weight:bold">@Model.NamesProduct</h1>
+        <br />
+        <span class="p_info">               
+			<span class="icon_price"></span>                          
+			<span class="price-offer">@int.Parse(Model.PriceProduct.ToString()).ToString("0,0")<sup>đ</sup></span><span class="space">  |  </span>  
+			<span class="del"><del>@int.Parse(Model.CostProduct.ToString()).ToString("0,0")</del><sup>đ</sup></span>                       
+        </span> 
+       <a class="deliver-icon" style=" margin-top:-3px; margin-left:18px; color:blue">
+			<p class="countBuy">  <b>@Model.CountBuyProduct</b> <b class="micro_line"></b></p>
+		</a>
+        <br /> 
+        <br />
+        <p><span style="float:left">Đánh giá:  </span><img style="float:left; margin-left:10px; margin-top:-3px;" height="20" src="~/Frondend_files/images/star.png" />  </p>
+        <br />
+        <br />
+        <div>
+            <span class="btn-addgiohang">
+		        <a style="margin:0" onclick="AddProductToCart(@Model.IDProduct);" href="#"><i>Thêm vào giỏ hàng</i>
+		        </a>
+		    </span>
+        </div>
+        <br />
+       
+        <div class="TitleProductRelates">
+            Sản phẩm cùng danh mục
+        </div>
+        <br />
+       <marquee direction="down" behavior="alternate" height="600px" scrollamount="5" onmouseover="this.start();" onmouseout="this.stop();">
+
+        @foreach (var item in (IEnumerable<NM.SelectProductInCategoryResult>)ViewData["ProductRelates"])
+        {
+            <div class="RelatesProductsdc">
+                   <div style="float:left; width:95%; margin-left:-2px" >
+                       <a href="/Home/ProductDetail/@item.AliasCategory/@item.AliasProduct/@item.IDProduct" > 
+                                <img src="~/@item.ImagesLogoProduct" alt="@item.NamesProduct" width="225" height="220" />
+                        </a>
+                   </div>
+                    <br />
+                    <div class="inforProduct" style=" padding-left:3.5%;width:95%; text-align:center; margin-top:8px;">
+                        <a href="/Home/ProductDetail/@item.AliasCategory/@item.AliasProduct/@item.IDProduct"  style="text-align:justify; font-size:12px; font-weight:bold">@item.NamesProduct</a>
+                         <br />
+
+                        <p style="margin-top:7px; float:left">
+                            <span class="icon_price"></span>                          
+				            <span class="price-offer">@int.Parse(item.PriceProduct.ToString()).ToString("0,0 đ")<sup>đ</sup></span><span class="space"></span>  
+                            <br />
+                           
+				         </p>
+                         <img style=" float:left; margin-left:15px; margin-top:7px;" height="14" src="~/Frondend_files/images/star.png" /> 
+				
+                    </div>
+
+              </div>
+            <br />           
+            
+        } 
+       
+        </marquee>
+    </div>
+</div>
+<!-- show Relates Product of Product now   -->

@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "AddCategoryParentView";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+    
+}
+   <div id="divthemloaihang" class="panel-wrapper" style="margin-top:25px;">         
+		</div>
+        	<div class="shadow"></div> 
+        
+ <div  class="panel-wrapper" style="margin-top:25px;">
+<div class="panel">
+            <div class="title"> 
+                <h4><strong>Thêm danh mục</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form method="post" action="/Admin/AddCategoryParent" enctype="multipart/form-data"> 
+                    
+                    <div class="group fixed"> <label>Tên danh mục</label> 
+                            <input type="text" value="" name="nameCategory" required /> 
+                            
+                     </div>
+
+                     <div class="group fixed"> <label>Alias danh mục</label> 
+                            <input type="text" value="" name="aliasCategory" required /> 
+                            
+                     </div>
+
+                    <div class="group fixed"><label>Icon danh mục</label> 
+                             <input type="file" name="iconCategory" value=""  required/> (Width= 20px / Height= 20px)
+                            </div>
+                        
+                                        
+                     
+                    <br />
+                    <center><input type="submit" class="button-blue" value="Hoàn tất" /></center>
+				</form>
+			<!-- ## / Panel Content  --> </div> 
+		</div>
+        	<div class="shadow"></div> 
+
+        </div>
+		
+        <div class="notice warning" style="margin-top:25px;"><span><strong>Lưu ý:</strong> khi xóa Menu Cấp 01 sẽ mất toàn bộ sản phẩm của Danh mục Menu đó, vì vậy chỉ nên nên thêm mới hoặc sửa lại!</span> </div>
+                
+    

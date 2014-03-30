@@ -1,0 +1,92 @@
+﻿@model IEnumerable<NM.SelectProductAdminIndexResult>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<script> 
+    function DeleteCategory (idCategory)
+    {
+        if (confirm('Bạn muốn xóa danh mục này!')) {
+            var url = ""+idCategory;
+            $('#' + idCategory).hide();
+            $('#textload').load(url);
+        }
+        else
+        { }
+    }
+
+</script>
+<div id="textload" style="display:none" >vinh</div>
+<div class="content spacing"><a href="/Product/AddProduct"  class="button-blue">Thêm mới sản phẩm</a></div>
+        
+         <div id="divthemloaihang" class="panel-wrapper" style="margin-top:25px;"> 
+        
+		</div>
+        	<div class="shadow"></div> 
+        
+        <div  class="panel-wrapper" style="margin-top:25px;"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>Danh sách sản phẩm</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<table id="sample-table-sortable" class="sortable resizable">
+                	<thead><tr>
+                    	<th>STT</th>
+                        <th>Tên sản phẩm </th>
+                        <th>Hình ảnh</th>
+                        <th>Chỉnh sửa</th>
+                        <th>Xóa</th>
+					</tr></thead> 
+                    <tbody>
+                    @{
+                        int i = 1;
+                        foreach (var item in Model)
+                        {
+                             <tr id="@item.IDProduct">
+                    	    <td>@(i++)</td>
+                            <td>@item.NamesProduct</td>
+                            <td><img height="90" width="90" src="../../@item.ImagesLogoProduct" /></td>
+                            <td><a href="/Product/EditProduct?idProduct=@item.IDProduct" >Chỉnh sửa</a></td>
+                            <td> @if(@item.IsDelete==false){<a href="/Product/DeleteProduct?idProduct=@item.IDProduct">Xóa</a>}
+                                else {
+                                 <a href="/Product/RestoreProduct?idProduct=@item.IDProduct">Phục hồi </a>
+                                }
+                            </td>
+                            </tr>                        
+                        }
+                    }
+                   
+                  </tbody>
+				</table>  
+			<!-- ## / Panel Content  --> </div> 
+		</div>
+        	<div class="shadow"></div> 
+        </div>
+
+                <div style="clear:both"></div>
+
+                <div id="Collectionpage" >  
+                    <div id="pagesrcoll">
+                        @for (int number = 1; number <= (int)ViewBag.pagenumber; number++)
+                        {
+                            if (number == int.Parse(Session["pagenumber"].ToString()))
+                            {
+                                <a href="/Product/PagingProduct?idPage=@number"><div class="item_colections">@number</div> </a>
+                            }
+                            else 
+                            {
+                                <a href="/Product/PagingProduct?idPage=@number"><div class="item_colection">@number</div> </a>
+                            }
+                        }
+           
+                     </div>
+                </div>
+
+                <br /><br />
+		
+        <div class="notice warning" style="margin-top:25px;"><span><strong>Lưu ý:</strong> Khi bạn xóa sản phẩm bên ngoài trang chủ sẽ không hiện sản phẩm đó. Bạn có thể phục hồi sau khi xóa!</span> </div>
+                
+    

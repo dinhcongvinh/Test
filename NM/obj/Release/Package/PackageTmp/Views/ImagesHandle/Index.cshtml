@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<script>
+
+    function DeleteImages(nameImage, count)
+    {
+        if (confirm('Bạn thật sự muốn xóa hình này'))
+        {
+            var url = "/ImagesHandle/DeleteImages?nameImages=" + nameImage;
+            alert(url);
+            $('#'+count).load();
+            $('#' + count).hide();
+        }
+        else
+        {
+           
+        }
+    }
+
+</script>
+ <div class="panel-wrapper"> 
+        	<div class="panel">
+            <div class="title"> 
+                <h4><strong>Quản lý hình ảnh</strong></h4> 
+                <div class="collapse">thu gọn lại</div> 
+            </div>
+        	<div class="content"> <!-- ## Panel Content  -->
+            	<form id="formthemsanpham" method="post" action="/ImagesHandle/AddImages" enctype="multipart/form-data" > 
+                	   <input type="file" name="fileUpload" multiple="multiple" />
+                    <center> <input type="submit" class="button-blue" value="Thêm Sản Phẩm"></center>
+                    
+				</form>
+                @{ int count =0 ; 
+                    foreach (var item in (List<string>)ViewData["listImages"])
+                    {
+                        <div class="ItemImages" id="@count">
+                            <img src="../../Images/@item.ToString()" style="width:100px; height:100px;" width="100" height="100" /> 
+                            
+                            <br />
+                            <input type="text" value="@item.ToString()" /> 
+                       </div>
+                    
+                        count++;
+                    }
+                }
+			<!-- ## / Panel Content  --> </div> 
+		</div>
+        	<div class="shadow"></div> 
+        </div>
+        
+
