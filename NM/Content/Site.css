@@ -13,6 +13,15 @@ body {
     margin: 0;
     padding: 0;
 }
+#congvinh {
+    background-color: #fff;
+    border-top: solid 10px #000;
+    color: #333;
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+}
 
 a {
     color: #333;
